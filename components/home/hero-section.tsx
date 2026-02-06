@@ -36,7 +36,7 @@ export function HeroSection() {
 
       {/* Credibility Strip */}
       <div className="relative bg-primary/20 backdrop-blur-sm border-t border-background/10">
-        <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 pt-4 pb-16 sm:py-4 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm">
             <div className="flex items-center gap-2 text-background/90">
               <Calendar className="h-4 w-4 text-primary" />

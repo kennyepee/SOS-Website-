@@ -114,7 +114,7 @@ export function Header() {
                   </button>
                   {openDropdown === item.name && (
                     <div className="absolute left-0 top-full pt-1 w-52 z-50">
-                      <div className="rounded-lg bg-white border border-gray-100 shadow-lg overflow-hidden">
+                      <div className="rounded-lg bg-white border border-gray-100 shadow-lg">
                         {item.children.map((child) => (
                           <div
                             key={child.name}
