@@ -33,6 +33,13 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    
+    const subject = encodeURIComponent(`[SOS Contact] ${formData.inquiryType || 'General Inquiry'}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`
+    )
+    
+    window.location.href = `mailto:Stridesoversidelines@gmail.com?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
 
@@ -72,9 +79,9 @@ export default function ContactPage() {
                     <div className="mx-auto h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-4">
                       <Send className="h-8 w-8 text-primary" />
                     </div>
-                    <h3 className="font-semibold text-lg text-foreground">Message Sent!</h3>
+                    <h3 className="font-semibold text-lg text-foreground">Almost There!</h3>
                     <p className="mt-2 text-muted-foreground">
-                      Thank you for reaching out. We will be in touch soon.
+                      Your email app should have opened with your message pre-filled. Please confirm and hit send in your email app to complete your message. We will be in touch soon.
                     </p>
                     <Button
                       onClick={() => {
@@ -168,7 +175,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground">Email</h3>
-                      <p className="mt-1 text-muted-foreground">StridesOverSidelines@gmail.com</p>
+                      <p className="mt-1 text-muted-foreground">Stridesoversidelines@gmail.com</p>
                     </div>
                   </div>
 
@@ -188,28 +195,34 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
                     <div className="flex gap-4">
                       <a
-                        href="#"
+                        href="https://www.instagram.com/stridesoversidelines"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                       >
                         <Instagram className="h-5 w-5" />
                         <span className="sr-only">Instagram</span>
                       </a>
                       <a
-                        href="#"
+                        href="https://www.linkedin.com/company/strides-over-sidelines"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                       >
                         <Linkedin className="h-5 w-5" />
                         <span className="sr-only">LinkedIn</span>
                       </a>
                       <a
-                        href="#"
+                        href="https://www.youtube.com/@StridesOverSidelines"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                       >
                         <Youtube className="h-5 w-5" />
                         <span className="sr-only">YouTube</span>
                       </a>
                       <Link
-                        href="/podcast"
+                        href="/media/podcast"
                         className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
                       >
                         <Headphones className="h-5 w-5" />
@@ -230,7 +243,7 @@ export default function ContactPage() {
                       <Link href="/donate">Donate</Link>
                     </Button>
                     <Button asChild variant="outline" size="sm">
-                      <Link href="/podcast">Podcast</Link>
+                      <Link href="/media/podcast">Podcast</Link>
                     </Button>
                   </div>
                 </div>

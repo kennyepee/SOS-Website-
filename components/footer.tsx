@@ -4,35 +4,33 @@ import { Facebook, Instagram, Youtube, Linkedin, Mail, MapPin } from "lucide-rea
 
 const navigation = {
   about: [
-    { name: "About SOS", href: "/about" },
-    { name: "Mission & Vision", href: "/mission-vision" },
-    { name: "Our Team", href: "/team" },
-    { name: "Advisors", href: "/advisors" },
-    { name: "Partners", href: "/partners" },
+    { name: "Our Story", href: "/about" },
+    { name: "Mission", href: "/about/mission" },
+    { name: "Our Approach", href: "/about/approach" },
+    { name: "Team", href: "/team/staff" },
+    { name: "Impact", href: "/impact" },
   ],
   programs: [
+    { name: "2026 Summer Cohort", href: "/summer-cohort" },
+    { name: "College/Pro Sessions", href: "/college-pro-sessions" },
     { name: "Events", href: "/events" },
-    { name: "Workshops", href: "/events/workshops" },
-    { name: "Fundraisers", href: "/events/fundraisers" },
-    { name: "Case Studies", href: "/case-studies" },
   ],
   getInvolved: [
-    { name: "Join Us", href: "/join-us" },
-    { name: "Mentorship Program", href: "/join-us/mentorship" },
-    { name: "Guest Speakers", href: "/join-us/guest-speakers" },
-    { name: "Podcast Guest", href: "/join-us/podcast-guest" },
+    { name: "Mentorship", href: "/get-involved/mentorship" },
+    { name: "Workshops", href: "/get-involved/workshops" },
+    { name: "Podcast Guest", href: "/get-involved/podcast" },
     { name: "Donate", href: "/donate" },
   ],
-  resources: [
-    { name: "Blog", href: "/blog" },
-    { name: "Podcast", href: "/podcast" },
+  media: [
+    { name: "Podcast", href: "/media/podcast" },
+    { name: "Social Media", href: "/media/social" },
+    { name: "Newsletter", href: "/media/newsletter" },
     { name: "Contact", href: "/contact" },
   ],
   social: [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Instagram", href: "#", icon: Instagram },
-    { name: "YouTube", href: "#", icon: Youtube },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
+    { name: "Instagram", href: "https://www.instagram.com/stridesoversidelines", icon: Instagram },
+    { name: "YouTube", href: "https://www.youtube.com/@StridesOverSidelines", icon: Youtube },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/strides-over-sidelines", icon: Linkedin },
   ],
 }
 
@@ -48,19 +46,19 @@ export function Footer() {
               alt="Strides Over Sidelines"
               width={160}
               height={70}
-              className="h-16 w-auto mb-4 brightness-0 invert"
+              className="h-14 w-auto mb-4 brightness-0 invert"
             />
             <p className="text-background/80 text-sm leading-relaxed">
-              Empowering underserved youth through high-quality soccer training, mental performance education, academic support, and mentorship in the Washington, D.C. metro area.
+              Delivering soccer training, mentorship, and mental performance tools to underserved youth across the Washington, DC metro area.
             </p>
             <div className="mt-6 space-y-2">
               <div className="flex items-center gap-2 text-sm text-background/80">
                 <MapPin className="h-4 w-4 shrink-0" />
-                <span>Washington, D.C. Metro Area</span>
+                <span>Washington, DC Metro Area</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-background/80">
                 <Mail className="h-4 w-4 shrink-0" />
-                <span>StridesOverSidelines@gmail.com</span>
+                <span>Stridesoversidelines@gmail.com</span>
               </div>
             </div>
           </div>
@@ -116,11 +114,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources Links */}
+          {/* Media Links */}
           <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
+            <h4 className="font-semibold mb-4">Media</h4>
             <ul className="space-y-2">
-              {navigation.resources.map((item) => (
+              {navigation.media.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
@@ -150,7 +148,7 @@ export function Footer() {
               ))}
             </div>
             <p className="text-sm text-background/60">
-              &copy; {new Date().getFullYear()} Strides Over Sidelines (SOS). All rights reserved.
+              © 2025 Strides Over Sidelines. All rights reserved.
             </p>
           </div>
         </div>

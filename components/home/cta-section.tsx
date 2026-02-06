@@ -4,7 +4,7 @@ import { Heart, Headphones, Instagram, Linkedin, Youtube } from "lucide-react"
 
 export function CtaSection() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-muted">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Stay Connected */}
         <div className="mx-auto max-w-2xl text-center mb-16">
@@ -12,25 +12,25 @@ export function CtaSection() {
             Stay Connected
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Follow our work and hear stories from students, families, coaches, and the broader community.
+            Follow our work and hear stories from our community.
           </p>
           <div className="mt-6 flex items-center justify-center gap-4">
-            <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+            <a href="https://www.instagram.com/stridesoversidelines" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+            <a href="https://www.linkedin.com/company/strides-over-sidelines" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </a>
-            <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+            <a href="https://www.youtube.com/@StridesOverSidelines" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
               <Youtube className="h-5 w-5" />
               <span className="sr-only">YouTube</span>
             </a>
-            <a href="/podcast" className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
+            <Link href="/media/podcast" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
               <Headphones className="h-5 w-5" />
               <span className="sr-only">Podcast</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -45,10 +45,10 @@ export function CtaSection() {
                 Help Build Opportunity That Lasts
               </h3>
               <p className="mt-4 text-primary-foreground/80 leading-relaxed">
-                Your support helps SOS deliver high-quality soccer training, mental performance education, career and academic readiness support, and mentorship to underserved youth.
+                Your support helps SOS deliver high-quality soccer training, mentorship, and mental performance tools to underserved youth.
               </p>
               <Button asChild className="mt-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                <Link href="/donate">Make a Donation</Link>
+                <Link href="/donate">Donate — Coming Soon</Link>
               </Button>
             </div>
             {/* Decorative element */}
@@ -66,10 +66,10 @@ export function CtaSection() {
                 Listen to The SOS Podcast
               </h3>
               <p className="mt-4 text-background/80 leading-relaxed">
-                Our storytelling and education platform making youth development knowledge accessible while elevating community voices.
+                Conversations with athletes, coaches, mentors, and leaders who believe in sport as a platform for growth and opportunity.
               </p>
               <Button asChild variant="outline" className="mt-6 border-background/30 text-background hover:bg-background/10 bg-transparent">
-                <Link href="/podcast">Explore Episodes</Link>
+                <Link href="/media/podcast">Explore Episodes</Link>
               </Button>
             </div>
             {/* Decorative element */}

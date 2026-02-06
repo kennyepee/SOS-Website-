@@ -2,20 +2,20 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Heart, ArrowLeft, CheckCircle } from "lucide-react"
+import { Trophy, ArrowLeft, CheckCircle } from "lucide-react"
 
 export const metadata = {
-  title: "Fundraisers | Strides Over Sidelines",
-  description: "SOS fundraising events supporting our programs and mission.",
+  title: "Training Sessions | Strides Over Sidelines",
+  description: "SOS training sessions - youth development and college/pro-level training.",
 }
 
-const fundraiserTypes = [
-  "Community soccer events",
-  "Partner-hosted fundraisers",
-  "Special initiatives and campaigns",
+const trainingTypes = [
+  "Youth development training",
+  "College and pro-level sessions",
+  "Position-specific or skills-focused training",
 ]
 
-export default function FundraisersPage() {
+export default function TrainingPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -33,26 +33,26 @@ export default function FundraisersPage() {
               </Link>
               <div className="flex justify-center mb-6">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-                  <Heart className="h-8 w-8 text-primary" />
+                  <Trophy className="h-8 w-8 text-primary" />
                 </div>
               </div>
               <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                Fundraising Events
+                Training Sessions
               </h1>
               <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                Fundraising events support SOS programs and help expand access to quality training and mentorship.
+                SOS training sessions focus on structured, development-first soccer environments.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Fundraiser Types */}
+        {/* Training Types */}
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
-              <h2 className="font-serif text-2xl font-bold text-foreground">Events may include:</h2>
+              <h2 className="font-serif text-2xl font-bold text-foreground">Sessions may include:</h2>
               <div className="mt-6 space-y-4">
-                {fundraiserTypes.map((item, index) => (
+                {trainingTypes.map((item, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
                     <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
                     <span className="text-foreground">{item}</span>
@@ -60,25 +60,28 @@ export default function FundraisersPage() {
                 ))}
               </div>
               <p className="mt-8 text-muted-foreground">
-                More details will be shared as events are announced.
+                Training sessions are designed to maintain high standards while prioritizing growth and learning.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Donate CTA */}
-        <section className="py-20 lg:py-28 bg-primary">
+        {/* Program Links */}
+        <section className="py-20 lg:py-28 bg-muted">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-primary-foreground">
-                Support Our Mission
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
+                Our Programs
               </h2>
-              <p className="mt-6 text-lg text-primary-foreground/80">
-                Can't attend an event? You can still make a difference. Online donations are coming soon.
+              <p className="mt-4 text-muted-foreground">
+                Learn more about our structured training programs.
               </p>
-              <div className="mt-10">
-                <Button asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                  <Link href="/donate">Donate — Coming Soon</Link>
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Button asChild>
+                  <Link href="/summer-cohort">2026 Summer Cohort</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/college-pro-sessions">College/Pro Sessions</Link>
                 </Button>
               </div>
             </div>

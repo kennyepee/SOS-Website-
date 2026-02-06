@@ -8,25 +8,12 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair' });
 
 export const metadata: Metadata = {
-  title: 'Strides Over Sidelines (SOS)',
-  description: 'Empowering underserved youth ages 8-15 through high-quality soccer training, mental performance education, academic support, and mentorship in the Washington, D.C. metro area.',
+  title: 'Strides Over Sidelines',
+  description: 'Delivering soccer training, mentorship, and mental performance tools to underserved youth across the Washington, DC metro area.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/sos-logo.png',
+    apple: '/images/sos-logo.png',
   },
 }
 

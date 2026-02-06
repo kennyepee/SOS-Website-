@@ -12,45 +12,64 @@ const navigation = [
     name: "About",
     href: "/about",
     children: [
-      { name: "About SOS", href: "/about" },
-      { name: "Mission & Vision", href: "/mission-vision" },
-      { name: "Our Team", href: "/team" },
-      { name: "Advisors", href: "/advisors" },
-      { name: "Partners", href: "/partners" },
+      { name: "Our Story", href: "/about" },
+      { name: "Mission", href: "/about/mission" },
+      { name: "Our Approach", href: "/about/approach" },
+      {
+        name: "Team",
+        href: "/team",
+        children: [
+          { name: "Staff", href: "/team/staff" },
+          { name: "Board of Directors", href: "/team/board" },
+          { name: "Advisors", href: "/team/advisors" },
+        ],
+      },
+    ],
+  },
+  { name: "2026 Summer Cohort", href: "/summer-cohort" },
+  { name: "College/Pro Sessions", href: "/college-pro-sessions" },
+  { name: "Impact", href: "/impact" },
+  {
+    name: "Get Involved",
+    href: "/get-involved",
+    children: [
+      { name: "Mentorship", href: "/get-involved/mentorship" },
+      { name: "Workshops", href: "/get-involved/workshops" },
+      { name: "Podcast", href: "/get-involved/podcast" },
+    ],
+  },
+  {
+    name: "Media",
+    href: "/media",
+    children: [
+      { name: "Podcast", href: "/media/podcast" },
+      { name: "Social Media", href: "/media/social" },
+      { name: "Newsletter", href: "/media/newsletter" },
     ],
   },
   {
     name: "Events",
     href: "/events",
     children: [
-      { name: "All Events", href: "/events" },
+      { name: "Calendar", href: "/events/calendar" },
       { name: "Workshops", href: "/events/workshops" },
+      { name: "Training Sessions", href: "/events/training" },
       { name: "Fundraisers", href: "/events/fundraisers" },
     ],
   },
-  {
-    name: "Join Us",
-    href: "/join-us",
-    children: [
-      { name: "Get Involved", href: "/join-us" },
-      { name: "Mentorship Program", href: "/join-us/mentorship" },
-      { name: "Guest Speakers", href: "/join-us/guest-speakers" },
-      { name: "Podcast Guest", href: "/join-us/podcast-guest" },
-    ],
-  },
-  { name: "Blog", href: "/blog" },
-  { name: "Podcast", href: "/podcast" },
   { name: "Contact", href: "/contact" },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null)
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null)
+  const [mobileOpenSubDropdown, setMobileOpenSubDropdown] = useState<string | null>(null)
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <div className="flex">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
@@ -58,7 +77,7 @@ export function Header() {
               alt="Strides Over Sidelines"
               width={180}
               height={80}
-              className="h-16 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
         </div>
@@ -66,7 +85,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
             <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
@@ -76,33 +95,64 @@ export function Header() {
             )}
           </button>
         </div>
-        <div className="hidden lg:flex lg:items-center lg:gap-x-6">
+        <div className="hidden lg:flex lg:items-center lg:gap-x-1">
           {navigation.map((item) => (
             <div
               key={item.name}
               className="relative"
               onMouseEnter={() => item.children && setOpenDropdown(item.name)}
-              onMouseLeave={() => setOpenDropdown(null)}
+              onMouseLeave={() => {
+                setOpenDropdown(null)
+                setOpenSubDropdown(null)
+              }}
             >
               {item.children ? (
                 <>
-                  <button
-                    className="flex items-center gap-1 text-sm font-medium text-foreground hover:text-primary transition-colors py-2"
-                  >
+                  <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-md hover:bg-gray-50 transition-colors">
                     {item.name}
                     <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                   </button>
                   {openDropdown === item.name && (
-                    <div className="absolute left-0 top-full pt-2 w-48">
-                      <div className="rounded-lg bg-card border border-border shadow-lg overflow-hidden">
+                    <div className="absolute left-0 top-full pt-1 w-52 z-50">
+                      <div className="rounded-lg bg-white border border-gray-100 shadow-lg overflow-hidden">
                         {item.children.map((child) => (
-                          <Link
+                          <div
                             key={child.name}
-                            href={child.href}
-                            className="block px-4 py-2.5 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                            className="relative"
+                            onMouseEnter={() => child.children && setOpenSubDropdown(child.name)}
+                            onMouseLeave={() => !child.children && setOpenSubDropdown(null)}
                           >
-                            {child.name}
-                          </Link>
+                            {child.children ? (
+                              <>
+                                <button className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">
+                                  {child.name}
+                                  <ChevronDown className="h-4 w-4 -rotate-90" />
+                                </button>
+                                {openSubDropdown === child.name && (
+                                  <div className="absolute left-full top-0 ml-1 w-48">
+                                    <div className="rounded-lg bg-white border border-gray-100 shadow-lg overflow-hidden">
+                                      {child.children.map((subChild) => (
+                                        <Link
+                                          key={subChild.name}
+                                          href={subChild.href}
+                                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                                        >
+                                          {subChild.name}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                              </>
+                            ) : (
+                              <Link
+                                href={child.href}
+                                className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                              >
+                                {child.name}
+                              </Link>
+                            )}
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -111,14 +161,14 @@ export function Header() {
               ) : (
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-md hover:bg-gray-50 transition-colors"
                 >
                   {item.name}
                 </Link>
               )}
             </div>
           ))}
-          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground ml-4">
+          <Button asChild className="bg-primary hover:bg-primary/90 text-white ml-3">
             <Link href="/donate">Donate</Link>
           </Button>
         </div>
@@ -126,15 +176,15 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden">
-          <div className="space-y-1 px-6 pb-6 pt-2">
+        <div className="lg:hidden border-t border-gray-100">
+          <div className="space-y-1 px-4 pb-4 pt-2 max-h-[80vh] overflow-y-auto">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.children ? (
                   <div>
                     <button
                       onClick={() => setMobileOpenDropdown(mobileOpenDropdown === item.name ? null : item.name)}
-                      className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
+                      className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
                     >
                       {item.name}
                       <ChevronDown className={`h-4 w-4 transition-transform ${mobileOpenDropdown === item.name ? 'rotate-180' : ''}`} />
@@ -142,14 +192,41 @@ export function Header() {
                     {mobileOpenDropdown === item.name && (
                       <div className="ml-4 space-y-1 mt-1">
                         {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {child.name}
-                          </Link>
+                          <div key={child.name}>
+                            {child.children ? (
+                              <>
+                                <button
+                                  onClick={() => setMobileOpenSubDropdown(mobileOpenSubDropdown === child.name ? null : child.name)}
+                                  className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50"
+                                >
+                                  {child.name}
+                                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileOpenSubDropdown === child.name ? 'rotate-180' : ''}`} />
+                                </button>
+                                {mobileOpenSubDropdown === child.name && (
+                                  <div className="ml-4 space-y-1 mt-1">
+                                    {child.children.map((subChild) => (
+                                      <Link
+                                        key={subChild.name}
+                                        href={subChild.href}
+                                        className="block rounded-lg px-3 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                      >
+                                        {subChild.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </>
+                            ) : (
+                              <Link
+                                href={child.href}
+                                className="block rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-700"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {child.name}
+                              </Link>
+                            )}
+                          </div>
                         ))}
                       </div>
                     )}
@@ -157,7 +234,7 @@ export function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
+                    className="block rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -166,7 +243,7 @@ export function Header() {
               </div>
             ))}
             <div className="pt-4">
-              <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white">
                 <Link href="/donate">Donate</Link>
               </Button>
             </div>

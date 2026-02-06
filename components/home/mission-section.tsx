@@ -1,27 +1,27 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Dribbble, Brain, BookOpen, Users } from "lucide-react"
+import { Trophy, Brain, Users, Compass } from "lucide-react"
 
 const features = [
   {
-    icon: Dribbble,
-    title: "High-Quality Soccer Training",
-    description: "Led by qualified coaches focused on fundamentals, teamwork, and leadership development.",
+    icon: Trophy,
+    title: "Build Confidence & Discipline",
+    description: "Through structured soccer training that develops both athletic skills and personal accountability.",
   },
   {
     icon: Brain,
-    title: "Mental Performance Tools",
-    description: "Building confidence, resilience, emotional regulation, and focus through sports psychology.",
-  },
-  {
-    icon: BookOpen,
-    title: "Career & Academic Readiness",
-    description: "Mentorship that reinforces habits, accountability, and academic discipline.",
+    title: "Develop Mental Performance",
+    description: "Sports psychology tools that build resilience, focus, and leadership skills for life.",
   },
   {
     icon: Users,
-    title: "Family Guidance",
-    description: "Helping families navigate options, timelines, and next steps across school and sport.",
+    title: "Connect with Mentors",
+    description: "Current and former collegiate and professional athletes who model excellence and provide guidance.",
+  },
+  {
+    icon: Compass,
+    title: "Access New Pathways",
+    description: "Exposure to college and professional environments that open doors to future opportunities.",
   },
 ]
 
@@ -34,7 +34,7 @@ export function MissionSection() {
             What We Do
           </h2>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            SOS helps young athletes and their families navigate youth sports, academics, and long-term opportunity through a structured cohort model paired with practical guidance and advocacy.
+            SOS uses soccer as a vehicle for personal growth, leadership development, and opportunity. Our mentorship-driven model goes beyond training to build confident, disciplined young people.
           </p>
         </div>
 
@@ -51,11 +51,11 @@ export function MissionSection() {
         </div>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild variant="outline">
-            <Link href="/about">Our Model</Link>
+          <Button asChild>
+            <Link href="/about/approach">Our Approach</Link>
           </Button>
           <Button asChild variant="outline">
-            <Link href="/about">About Us</Link>
+            <Link href="/impact">See Our Impact</Link>
           </Button>
         </div>
       </div>
