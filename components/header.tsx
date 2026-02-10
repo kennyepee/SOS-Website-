@@ -17,15 +17,7 @@ const navigation = [
       { name: "Our Approach", href: "/about/approach" },
     ],
   },
-  {
-    name: "Team",
-    href: "/team/staff",
-    children: [
-      { name: "Staff", href: "/team/staff" },
-      { name: "Board of Directors", href: "/team/board" },
-      { name: "Advisors", href: "/team/advisors" },
-    ],
-  },
+  { name: "Team", href: "/team/staff" },
   { name: "2026 Summer Cohort", href: "/summer-cohort" },
   { name: "College/Pro Sessions", href: "/college-pro-sessions" },
   { name: "Impact", href: "/impact" },
