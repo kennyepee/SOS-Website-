@@ -55,9 +55,7 @@ const navigation = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null)
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null)
-  const [mobileOpenSubDropdown, setMobileOpenSubDropdown] = useState<string | null>(null)
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
@@ -93,10 +91,7 @@ export function Header() {
               key={item.name}
               className="relative"
               onMouseEnter={() => item.children && setOpenDropdown(item.name)}
-              onMouseLeave={() => {
-                setOpenDropdown(null)
-                setOpenSubDropdown(null)
-              }}
+              onMouseLeave={() => setOpenDropdown(null)}
             >
               {item.children ? (
                 <>
@@ -108,43 +103,13 @@ export function Header() {
                     <div className="absolute left-0 top-full pt-1 w-52 z-50">
                       <div className="rounded-lg bg-white border border-gray-100 shadow-lg">
                         {item.children.map((child) => (
-                          <div
+                          <Link
                             key={child.name}
-                            className="relative"
-                            onMouseEnter={() => child.children && setOpenSubDropdown(child.name)}
-                            onMouseLeave={() => !child.children && setOpenSubDropdown(null)}
+                            href={child.href}
+                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
                           >
-                            {child.children ? (
-                              <>
-                                <button className="w-full flex items-center justify-between px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors">
-                                  {child.name}
-                                  <ChevronDown className="h-4 w-4 -rotate-90" />
-                                </button>
-                                {openSubDropdown === child.name && (
-                                  <div className="absolute left-full top-0 ml-1 w-48">
-                                    <div className="rounded-lg bg-white border border-gray-100 shadow-lg overflow-hidden">
-                                      {child.children.map((subChild) => (
-                                        <Link
-                                          key={subChild.name}
-                                          href={subChild.href}
-                                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                                        >
-                                          {subChild.name}
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  </div>
-                                )}
-                              </>
-                            ) : (
-                              <Link
-                                href={child.href}
-                                className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
-                              >
-                                {child.name}
-                              </Link>
-                            )}
-                          </div>
+                            {child.name}
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -184,41 +149,14 @@ export function Header() {
                     {mobileOpenDropdown === item.name && (
                       <div className="ml-4 space-y-1 mt-1">
                         {item.children.map((child) => (
-                          <div key={child.name}>
-                            {child.children ? (
-                              <>
-                                <button
-                                  onClick={() => setMobileOpenSubDropdown(mobileOpenSubDropdown === child.name ? null : child.name)}
-                                  className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50"
-                                >
-                                  {child.name}
-                                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileOpenSubDropdown === child.name ? 'rotate-180' : ''}`} />
-                                </button>
-                                {mobileOpenSubDropdown === child.name && (
-                                  <div className="ml-4 space-y-1 mt-1">
-                                    {child.children.map((subChild) => (
-                                      <Link
-                                        key={subChild.name}
-                                        href={subChild.href}
-                                        className="block rounded-lg px-3 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                                        onClick={() => setMobileMenuOpen(false)}
-                                      >
-                                        {subChild.name}
-                                      </Link>
-                                    ))}
-                                  </div>
-                                )}
-                              </>
-                            ) : (
-                              <Link
-                                href={child.href}
-                                className="block rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-700"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {child.name}
-                              </Link>
-                            )}
-                          </div>
+                          <Link
+                            key={child.name}
+                            href={child.href}
+                            className="block rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-700"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {child.name}
+                          </Link>
                         ))}
                       </div>
                     )}

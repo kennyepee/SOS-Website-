@@ -48,9 +48,13 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
     id: 3,
     name: "Kwesi Abban",
     role: "",
-    bio: "",
-    question: "",
-    answer: "",
+    bio: `Kwesi Abban is a staff member at Strides Over Sidelines (SOS), driven by a deep belief that the values learned through sport — hard work, dedication, consistency, discipline, and passion — are the same ones that shape success in every area of life.
+
+Raised by parents who exemplified those traits daily, Kwesi carried that foundation onto the soccer field, where his consistency as a player earned him the opportunity to compete as a Division II student-athlete at California University of Pennsylvania (now PennWest California). While he may not have been the headline player, his discipline and reliability set him apart — qualities that continue to define his approach long after his playing days.
+
+Through SOS, Kwesi channels those experiences into mentoring young athletes, helping them recognize their strengths and potential both in the world's game and, most importantly, in life. His work is rooted in the belief that sport is one of the most powerful vehicles for building character, confidence, and purpose in the next generation.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "The biggest lesson sports taught me is selflessness. While it can be difficult, sometimes in sports and in life it's not always about you. It's equally important to support and assist those around you.",
     image: "/images/team/kwesi-abban.jpg",
     imagePosition: "",
   },
@@ -58,9 +62,15 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
     id: 4,
     name: "Kenny Epee",
     role: "Head of Information Technology",
-    bio: "",
-    question: "",
-    answer: "",
+    bio: `Kenny Epee is the Head of Information Technology at Strides Over Sidelines (SOS), a nonprofit focused on expanding access to high-quality athletic training, mentorship, and personal development for youth in the Washington, DC metro area.
+
+With a background in information technology and systems engineering, Kenny supports SOS by building and maintaining the technical infrastructure that enables the organization's programs to operate securely, reliably, and at scale. His work is shaped by the belief that strong systems — much like strong fundamentals in sport — create the conditions for sustainable growth and impact.
+
+Through SOS, Kenny focuses on designing technology that reduces friction and supports long-term scalability, allowing coaches, mentors, and athletes to focus on development rather than logistics. He brings a disciplined, sustainability-oriented approach to IT leadership that aligns technology decisions with mission outcomes.
+
+Kenny holds a Master of Science in Information Technology from Georgetown University and brings a structured, systems-driven approach to nonprofit operations. His work sits at the intersection of technology, access, and community impact, with a long-term vision of using technology as a quiet but powerful enabler of trust, opportunity, and growth beyond the field.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "Playing soccer opened my eyes to what I lacked as a player. I relied solely on natural talent, which got me far — but not far enough. That realization has stayed with me. Today, I bring more proactivity, more grit, more intentionality, and a hunger to win that has carried me further in every aspect of my life.",
     image: "/images/team/kenny-epee.jpg",
     imagePosition: "",
   },
@@ -68,7 +78,13 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
     id: 5,
     name: "Alex West",
     role: "",
-    bio: "",
+    bio: `Alex West is a staff member at Strides Over Sidelines (SOS), bringing a lifelong connection to sport and a professional background in data and operations systems to the organization's mission.
+
+An athlete since the age of four, Alex grew up in an era of limited opportunities for girls in sports, often competing alongside boys across multiple positions until the age of twelve. Those early experiences taught her how to face adversity head-on, challenge stereotypes, and build resilience in environments where she wasn't always expected to succeed.
+
+Transitioning to girls' teams brought its own challenges — pushing her to adapt quickly, embrace the unknown, and consistently exceed expectations. That drive carried her to the University of Vermont, where she competed as a Division I soccer player and continued to develop as both an athlete and a leader.
+
+Today, Alex brings the discipline, adaptability, and leadership shaped by her athletic career into her role as a Data and Operations Systems Manager and into her work with SOS. She is passionate about passing those lessons on to the next generation — helping create opportunities that allow young athletes to grow, compete, and reach their full potential.`,
     question: "",
     answer: "",
     image: "/images/team/alex-west.jpg",
@@ -206,9 +222,11 @@ export function StaffGrid() {
                           <p className="text-sm font-semibold text-foreground italic">
                             {selectedMember.question}
                           </p>
-                          <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                            {selectedMember.answer}
-                          </p>
+                          {selectedMember.answer && (
+                            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                              {selectedMember.answer}
+                            </p>
+                          )}
                         </div>
                       )}
                     </>
