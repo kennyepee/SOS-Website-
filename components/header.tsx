@@ -15,15 +15,15 @@ const navigation = [
       { name: "Our Story", href: "/about" },
       { name: "Mission", href: "/about/mission" },
       { name: "Our Approach", href: "/about/approach" },
-      {
-        name: "Team",
-        href: "/team",
-        children: [
-          { name: "Staff", href: "/team/staff" },
-          { name: "Board of Directors", href: "/team/board" },
-          { name: "Advisors", href: "/team/advisors" },
-        ],
-      },
+    ],
+  },
+  {
+    name: "Team",
+    href: "/team/staff",
+    children: [
+      { name: "Staff", href: "/team/staff" },
+      { name: "Board of Directors", href: "/team/board" },
+      { name: "Advisors", href: "/team/advisors" },
     ],
   },
   { name: "2026 Summer Cohort", href: "/summer-cohort" },
