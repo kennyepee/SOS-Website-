@@ -80,6 +80,7 @@ const staffMembers = [
     role: "",
     bio: "Bio coming soon.",
     image: "/images/team/aayush-raman.jpg",
+    imagePosition: "object-top",
   },
   {
     id: 11,
@@ -145,7 +146,7 @@ export default function StaffPage() {
                         alt={member.name}
                         width={128}
                         height={128}
-                        className="h-full w-full object-cover"
+                        className={`h-full w-full object-cover ${member.imagePosition || "object-center"}`}
                       />
                     </div>
                   ) : (
