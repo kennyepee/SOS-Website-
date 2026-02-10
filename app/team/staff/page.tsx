@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 import { Users, Mail, Linkedin, ArrowRight } from "lucide-react"
 
 export const metadata = {
@@ -12,38 +13,87 @@ export const metadata = {
 const staffMembers = [
   {
     id: 1,
-    name: "Staff Member 1",
-    role: "Position Title",
+    name: "Jordan Gamarra",
+    role: "Co-Founder",
     bio: "Bio coming soon.",
-    image: null,
+    image: "/images/team/jordan-gamarra.jpg",
   },
   {
     id: 2,
-    name: "Staff Member 2",
-    role: "Position Title",
+    name: "Asia Horne",
+    role: "Co-Founder",
     bio: "Bio coming soon.",
-    image: null,
+    image: "/images/team/asia-horne.jpg",
   },
   {
     id: 3,
-    name: "Staff Member 3",
-    role: "Position Title",
+    name: "Kwesi Abban",
+    role: "",
     bio: "Bio coming soon.",
-    image: null,
+    image: "/images/team/kwesi-abban.jpg",
   },
   {
     id: 4,
-    name: "Staff Member 4",
-    role: "Position Title",
+    name: "Kenny Epee",
+    role: "",
+    bio: "Bio coming soon.",
+    image: "/images/team/kenny-epee.jpg",
+  },
+  {
+    id: 5,
+    name: "Alex West",
+    role: "",
+    bio: "Bio coming soon.",
+    image: "/images/team/alex-west.jpg",
+  },
+  {
+    id: 6,
+    name: "Kaelyn Britt",
+    role: "",
     bio: "Bio coming soon.",
     image: null,
   },
   {
-    id: 5,
-    name: "Staff Member 5",
-    role: "Position Title",
+    id: 7,
+    name: "Melea Earley",
+    role: "",
     bio: "Bio coming soon.",
     image: null,
+  },
+  {
+    id: 8,
+    name: "Jamie Joseph",
+    role: "",
+    bio: "Bio coming soon.",
+    image: null,
+  },
+  {
+    id: 9,
+    name: "Geoff King",
+    role: "",
+    bio: "Bio coming soon.",
+    image: null,
+  },
+  {
+    id: 10,
+    name: "Aayush Raman",
+    role: "",
+    bio: "Bio coming soon.",
+    image: "/images/team/aayush-raman.jpg",
+  },
+  {
+    id: 11,
+    name: "Jane Wallis",
+    role: "",
+    bio: "Bio coming soon.",
+    image: null,
+  },
+  {
+    id: 12,
+    name: "William Boinest",
+    role: "",
+    bio: "Bio coming soon.",
+    image: "/images/team/william-boinest.jpg",
   },
 ]
 
@@ -88,17 +138,30 @@ export default function StaffPage() {
                   key={member.id}
                   className="group p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-all"
                 >
-                  {/* Headshot Placeholder */}
-                  <div className="aspect-square w-32 mx-auto rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-muted flex items-center justify-center mb-6">
-                    <Users className="h-12 w-12 text-muted-foreground/50" />
-                  </div>
+                  {member.image ? (
+                    <div className="aspect-square w-32 mx-auto rounded-full overflow-hidden mb-6">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={128}
+                        height={128}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-square w-32 mx-auto rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-muted flex items-center justify-center mb-6">
+                      <Users className="h-12 w-12 text-muted-foreground/50" />
+                    </div>
+                  )}
                   <div className="text-center">
                     <h3 className="font-serif text-xl font-bold text-foreground">
                       {member.name}
                     </h3>
-                    <p className="text-sm font-medium text-primary mt-1">
-                      {member.role}
-                    </p>
+                    {member.role && (
+                      <p className="text-sm font-medium text-primary mt-1">
+                        {member.role}
+                      </p>
+                    )}
                     <p className="mt-4 text-muted-foreground text-sm">
                       {member.bio}
                     </p>
