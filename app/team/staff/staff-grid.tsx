@@ -68,7 +68,7 @@ With a background in information technology and systems engineering, Kenny suppo
 
 Through SOS, Kenny focuses on designing technology that reduces friction and supports long-term scalability, allowing coaches, mentors, and athletes to focus on development rather than logistics. He brings a disciplined, sustainability-oriented approach to IT leadership that aligns technology decisions with mission outcomes.
 
-Kenny holds a Master of Science in Information Technology from Georgetown University and brings a structured, systems-driven approach to nonprofit operations. His work sits at the intersection of technology, access, and community impact, with a long-term vision of using technology as a quiet but powerful enabler of trust, opportunity, and growth beyond the field.`,
+Kenny holds a Master of Science in Information Technology Management from Georgetown University and brings a structured, systems-driven approach to nonprofit operations. His work sits at the intersection of technology, access, and community impact, with a long-term vision of using technology as a quiet but powerful enabler of trust, opportunity, and growth beyond the field.`,
     question: "Biggest lesson that sports has taught you?",
     answer: "Playing soccer opened my eyes to what I lacked as a player. I relied solely on natural talent, which got me far — but not far enough. That realization has stayed with me. Today, I bring more proactivity, more grit, more intentionality, and a hunger to win that has carried me further in every aspect of my life.",
     image: "/images/team/kenny-epee.jpg",
