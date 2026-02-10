@@ -69,28 +69,6 @@ const staffMembers = [
   },
   {
     id: 9,
-    name: "Geoff King",
-    role: "",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 10,
-    name: "Aayush Raman",
-    role: "",
-    bio: "Bio coming soon.",
-    image: "/images/team/aayush-raman.jpg",
-    imagePosition: "object-top",
-  },
-  {
-    id: 11,
-    name: "Jane Wallis",
-    role: "",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 12,
     name: "William Boinest",
     role: "",
     bio: "Bio coming soon.",

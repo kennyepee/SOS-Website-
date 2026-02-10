@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 import { Users } from "lucide-react"
 
 export const metadata = {
@@ -12,36 +13,23 @@ export const metadata = {
 const boardMembers = [
   {
     id: 1,
-    name: "Board Member 1",
-    role: "Board Position",
+    name: "Aayush Raman",
+    role: "",
     bio: "Bio coming soon.",
-    image: null,
+    image: "/images/team/aayush-raman.jpg",
+    imagePosition: "object-top",
   },
   {
     id: 2,
-    name: "Board Member 2",
-    role: "Board Position",
+    name: "Jane Wallis",
+    role: "",
     bio: "Bio coming soon.",
     image: null,
   },
   {
     id: 3,
-    name: "Board Member 3",
-    role: "Board Position",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 4,
-    name: "Board Member 4",
-    role: "Board Position",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 5,
-    name: "Board Member 5",
-    role: "Board Position",
+    name: "Geoff King",
+    role: "",
     bio: "Bio coming soon.",
     image: null,
   },
@@ -88,16 +76,30 @@ export default function BoardPage() {
                   key={member.id}
                   className="group p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-all"
                 >
-                  <div className="aspect-square w-32 mx-auto rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-muted flex items-center justify-center mb-6">
-                    <Users className="h-12 w-12 text-muted-foreground/50" />
-                  </div>
+                  {member.image ? (
+                    <div className="aspect-square w-32 mx-auto rounded-full overflow-hidden mb-6">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={128}
+                        height={128}
+                        className={`h-full w-full object-cover ${member.imagePosition || "object-center"}`}
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-square w-32 mx-auto rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-muted flex items-center justify-center mb-6">
+                      <Users className="h-12 w-12 text-muted-foreground/50" />
+                    </div>
+                  )}
                   <div className="text-center">
                     <h3 className="font-serif text-xl font-bold text-foreground">
                       {member.name}
                     </h3>
-                    <p className="text-sm font-medium text-primary mt-1">
-                      {member.role}
-                    </p>
+                    {member.role && (
+                      <p className="text-sm font-medium text-primary mt-1">
+                        {member.role}
+                      </p>
+                    )}
                     <p className="mt-4 text-muted-foreground text-sm">
                       {member.bio}
                     </p>
