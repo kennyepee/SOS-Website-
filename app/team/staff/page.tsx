@@ -48,10 +48,10 @@ const staffMembers = [
   },
   {
     id: 6,
-    name: "Kaelyn Britt",
+    name: "William Boinest",
     role: "",
     bio: "Bio coming soon.",
-    image: null,
+    image: "/images/team/william-boinest.jpg",
   },
   {
     id: 7,
@@ -69,10 +69,10 @@ const staffMembers = [
   },
   {
     id: 9,
-    name: "William Boinest",
+    name: "Kaelyn Britt",
     role: "",
     bio: "Bio coming soon.",
-    image: "/images/team/william-boinest.jpg",
+    image: null,
   },
 ]
 
