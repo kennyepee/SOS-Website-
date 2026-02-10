@@ -2,79 +2,12 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Image from "next/image"
-import { Users, Mail, Linkedin, ArrowRight } from "lucide-react"
+import { StaffGrid } from "./staff-grid"
 
 export const metadata = {
   title: "Staff | Strides Over Sidelines",
   description: "Meet the staff members driving the Strides Over Sidelines mission forward.",
 }
-
-const staffMembers = [
-  {
-    id: 1,
-    name: "Jordan Gamarra",
-    role: "Co-Founder",
-    bio: "Bio coming soon.",
-    image: "/images/team/jordan-gamarra.jpg",
-  },
-  {
-    id: 2,
-    name: "Asia Horne",
-    role: "Co-Founder",
-    bio: "Bio coming soon.",
-    image: "/images/team/asia-horne.jpg",
-  },
-  {
-    id: 3,
-    name: "Kwesi Abban",
-    role: "",
-    bio: "Bio coming soon.",
-    image: "/images/team/kwesi-abban.jpg",
-  },
-  {
-    id: 4,
-    name: "Kenny Epee",
-    role: "",
-    bio: "Bio coming soon.",
-    image: "/images/team/kenny-epee.jpg",
-  },
-  {
-    id: 5,
-    name: "Alex West",
-    role: "",
-    bio: "Bio coming soon.",
-    image: "/images/team/alex-west.jpg",
-  },
-  {
-    id: 6,
-    name: "William Boinest",
-    role: "",
-    bio: "Bio coming soon.",
-    image: "/images/team/william-boinest.jpg",
-  },
-  {
-    id: 7,
-    name: "Melea Earley",
-    role: "",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 8,
-    name: "Jamie Joseph",
-    role: "",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 9,
-    name: "Kaelyn Britt",
-    role: "",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-]
 
 export default function StaffPage() {
   return (
@@ -111,43 +44,7 @@ export default function StaffPage() {
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-12">Staff</h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {staffMembers.map((member) => (
-                <div
-                  key={member.id}
-                  className="group p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-all"
-                >
-                  {member.image ? (
-                    <div className="aspect-square w-32 mx-auto rounded-full overflow-hidden mb-6">
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={128}
-                        height={128}
-                        className={`h-full w-full object-cover ${member.imagePosition || "object-center"}`}
-                      />
-                    </div>
-                  ) : (
-                    <div className="aspect-square w-32 mx-auto rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-muted flex items-center justify-center mb-6">
-                      <Users className="h-12 w-12 text-muted-foreground/50" />
-                    </div>
-                  )}
-                  <div className="text-center">
-                    <h3 className="font-serif text-xl font-bold text-foreground">
-                      {member.name}
-                    </h3>
-                    {member.role && (
-                      <p className="text-sm font-medium text-primary mt-1">
-                        {member.role}
-                      </p>
-                    )}
-                    <p className="mt-4 text-muted-foreground text-sm">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <StaffGrid />
           </div>
         </section>
 
