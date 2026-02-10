@@ -51,7 +51,7 @@ Jordan holds a Master of Science in Finance and brings a systems-driven, sustain
   {
     id: 4,
     name: "Kenny Epee",
-    role: "",
+    role: "Head of Information Technology",
     bio: "",
     question: "",
     answer: "",
