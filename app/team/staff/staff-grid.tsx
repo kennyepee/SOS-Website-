@@ -15,7 +15,7 @@ const staffMembers = [
   {
     id: 1,
     name: "Jordan Gamarra",
-    role: "Co-Founder",
+    role: "Founder",
     bio: `Jordan Gamarra is the founder of Strides Over Sidelines (SOS), a nonprofit dedicated to expanding access to high-quality athletic training, mentorship, and mental performance education for youth in the Washington, DC metro area.
 
 A former collegiate soccer player with experience at both American University and William & Mary, Jordan also spent time playing professionally before transitioning into leadership and community impact work. His background as an athlete shapes SOS's core philosophy: sport should develop the whole person, not just the player.
@@ -31,7 +31,7 @@ Jordan holds a Master of Science in Finance and brings a systems-driven, sustain
   {
     id: 2,
     name: "Asia Horne",
-    role: "Co-Founder",
+    role: "Founder",
     bio: `Asia Horne is the co-founder of Strides Over Sidelines (SOS), a youth nonprofit that empowers underserved students through soccer training, sports psychology, academic support, and mentorship in the Washington, DC metro area.
 
 Raised in The Bronx, Asia saw firsthand how community, support, and guidance can transform potential into confidence. That understanding followed her to Washington, DC, where she played Division I soccer at American University while earning degrees in Psychology and International Studies, followed by a master's in Psychology. Her experience as a collegiate athlete shaped her belief that the lessons learned on the field — leadership, teamwork, and resilience — are the same ones that prepare young people for success beyond it.
