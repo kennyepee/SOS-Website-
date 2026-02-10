@@ -32,8 +32,14 @@ Jordan holds a Master of Science in Finance and brings a systems-driven, sustain
     id: 2,
     name: "Asia Horne",
     role: "Co-Founder",
-    bio: "",
-    question: "",
+    bio: `Asia Horne is the co-founder of Strides Over Sidelines (SOS), a youth nonprofit that empowers underserved students through soccer training, sports psychology, academic support, and mentorship in the Washington, DC metro area.
+
+Raised in The Bronx, Asia saw firsthand how community, support, and guidance can transform potential into confidence. That understanding followed her to Washington, DC, where she played Division I soccer at American University while earning degrees in Psychology and International Studies, followed by a master's in Psychology. Her experience as a collegiate athlete shaped her belief that the lessons learned on the field — leadership, teamwork, and resilience — are the same ones that prepare young people for success beyond it.
+
+Through SOS, Asia focuses on turning the principles of sport into tools for growth in school, athletics, and life. The organization provides structured programming that builds confidence, discipline, and life skills for young athletes who might otherwise lack access to high-quality training and mentorship. Her work sits at the intersection of youth development, sports psychology, and community impact.
+
+When she's not coaching, mentoring, or building programs, Asia can be found at a local gym, collaborating on social ventures, or developing new ways to make sports and wellness accessible, meaningful, and fun for all kids.`,
+    question: "Biggest lesson that sports has taught you?",
     answer: "",
     image: "/images/team/asia-horne.jpg",
     imagePosition: "",
