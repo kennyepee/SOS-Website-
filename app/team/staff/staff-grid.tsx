@@ -72,7 +72,7 @@ Kenny holds a Master of Science in Information Technology from Georgetown Univer
     question: "Biggest lesson that sports has taught you?",
     answer: "Playing soccer opened my eyes to what I lacked as a player. I relied solely on natural talent, which got me far — but not far enough. That realization has stayed with me. Today, I bring more proactivity, more grit, more intentionality, and a hunger to win that has carried me further in every aspect of my life.",
     image: "/images/team/kenny-epee.jpg",
-    imagePosition: "",
+    imagePosition: "object-[25%_80%]",
   },
   {
     id: 5,
