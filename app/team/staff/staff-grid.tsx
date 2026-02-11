@@ -47,7 +47,7 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
   {
     id: 3,
     name: "Kwesi Abban",
-    role: "",
+    role: "Program & Development Lead",
     bio: `Kwesi Abban is a staff member at Strides Over Sidelines (SOS), driven by a deep belief that the values learned through sport — hard work, dedication, consistency, discipline, and passion — are the same ones that shape success in every area of life.
 
 Raised by parents who exemplified those traits daily, Kwesi carried that foundation onto the soccer field, where his consistency as a player earned him the opportunity to compete as a Division II student-athlete at California University of Pennsylvania (now PennWest California). While he may not have been the headline player, his discipline and reliability set him apart — qualities that continue to define his approach long after his playing days.
