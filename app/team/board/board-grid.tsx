@@ -45,7 +45,7 @@ Based in Washington, DC, Jane brings her passion for soccer, youth development, 
     bio: "",
     question: "",
     answer: "",
-    image: null,
+    image: "/images/team/geoff-king.jpg",
     imagePosition: "",
   },
 ]
