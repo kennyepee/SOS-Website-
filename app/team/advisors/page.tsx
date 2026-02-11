@@ -2,50 +2,12 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Users } from "lucide-react"
+import { AdvisorsGrid } from "./advisors-grid"
 
 export const metadata = {
   title: "Advisors | Strides Over Sidelines",
   description: "Meet the advisors guiding Strides Over Sidelines.",
 }
-
-const advisors = [
-  {
-    id: 1,
-    name: "Advisor 1",
-    role: "Advisory Role",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 2,
-    name: "Advisor 2",
-    role: "Advisory Role",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 3,
-    name: "Advisor 3",
-    role: "Advisory Role",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 4,
-    name: "Advisor 4",
-    role: "Advisory Role",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-  {
-    id: 5,
-    name: "Advisor 5",
-    role: "Advisory Role",
-    bio: "Bio coming soon.",
-    image: null,
-  },
-]
 
 export default function AdvisorsPage() {
   return (
@@ -82,29 +44,7 @@ export default function AdvisorsPage() {
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="font-serif text-2xl font-bold text-foreground mb-12">Advisors</h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {advisors.map((member) => (
-                <div
-                  key={member.id}
-                  className="group p-6 rounded-2xl bg-card border border-border hover:shadow-lg transition-all"
-                >
-                  <div className="aspect-square w-32 mx-auto rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-muted flex items-center justify-center mb-6">
-                    <Users className="h-12 w-12 text-muted-foreground/50" />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="font-serif text-xl font-bold text-foreground">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm font-medium text-primary mt-1">
-                      {member.role}
-                    </p>
-                    <p className="mt-4 text-muted-foreground text-sm">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <AdvisorsGrid />
           </div>
         </section>
       </main>
