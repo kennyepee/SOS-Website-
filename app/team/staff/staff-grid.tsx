@@ -40,7 +40,7 @@ Through SOS, Asia focuses on turning the principles of sport into tools for grow
 
 When she's not coaching, mentoring, or building programs, Asia can be found at a local gym, collaborating on social ventures, or developing new ways to make sports and wellness accessible, meaningful, and fun for all kids.`,
     question: "Biggest lesson that sports has taught you?",
-    answer: "",
+    answer: "The biggest lesson sports taught me is gratitude. It taught me to appreciate the small improvements just as much as the big victories. When I learned to value the daily growth, not just the outcome, it helped me stay motivated, grounded, and excited to keep learning.",
     image: "/images/team/asia-horne.jpg",
     imagePosition: "",
   },
@@ -61,7 +61,7 @@ Through SOS, Kwesi channels those experiences into mentoring young athletes, hel
   {
     id: 4,
     name: "Kenny Epee",
-    role: "Head of Information Technology Operations & Strategy",
+    role: "Head of Technology & Strategy",
     bio: `Kenny Epee is the Head of Information Technology Operations & Strategy at Strides Over Sidelines (SOS), a nonprofit focused on expanding access to high-quality athletic training, mentorship, and personal development for youth in the Washington, DC metro area.
 
 With a background in information technology and systems engineering, Kenny supports SOS by building and maintaining the technical infrastructure that enables the organization's programs to operate securely, reliably, and at scale. His work is shaped by the belief that strong systems — much like strong fundamentals in sport — create the conditions for sustainable growth and impact.
@@ -77,7 +77,7 @@ Kenny holds a Master of Science in Information Technology Management from George
   {
     id: 5,
     name: "Alex West",
-    role: "",
+    role: "Content Manager",
     bio: `Alex West is a staff member at Strides Over Sidelines (SOS), bringing a lifelong connection to sport and a professional background in data and operations systems to the organization's mission.
 
 An athlete since the age of four, Alex grew up in an era of limited opportunities for girls in sports, often competing alongside boys across multiple positions until the age of twelve. Those early experiences taught her how to face adversity head-on, challenge stereotypes, and build resilience in environments where she wasn't always expected to succeed.
@@ -123,7 +123,7 @@ Today, Alex brings the discipline, adaptability, and leadership shaped by her at
   {
     id: 9,
     name: "Kaelyn Britt",
-    role: "",
+    role: "Content Editor",
     bio: "",
     question: "",
     answer: "",
