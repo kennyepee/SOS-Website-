@@ -114,10 +114,12 @@ Today, Alex brings the discipline, adaptability, and leadership shaped by her at
     id: 8,
     name: "Jamie Joseph",
     role: "",
-    bio: "",
-    question: "",
-    answer: "",
-    image: null,
+    bio: `Jamie Joseph is the Director of Impact and Learning for Educating for American Democracy (EAD), where she leads national efforts to strengthen the quality and reach of civic education. Her background spans research, youth programming, and classroom teaching. Jamie holds a Master of Arts in Teaching and a Bachelor of Arts in Urban Geography and Community, Youth, and Education Studies from Clark University. Her work is grounded in a commitment to history, equity, youth empowerment, and community engagement.
+
+A lifelong soccer player, Jamie competed at the club and collegiate levels and spent a season playing professionally in Iceland for Afturelding FC. She currently plays for DCFC and serves as a youth coach with DC Way Academy.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "The biggest lesson sports taught me is that you have to be willing to work hard and never give up. It's not always about talent, it's about the effort you put in and the dedication you have to the sport. I learned that you can always improve and that there is always room for growth.",
+    image: "/images/team/jamie joseph.jpeg",
     imagePosition: "",
   },
   {
