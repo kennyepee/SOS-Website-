@@ -20,7 +20,19 @@ const advisors = [
     question: "",
     answer: "",
     image: "/images/team/nathan-belcher.jpg",
-    imagePosition: "",
+    imagePosition: "object-top",
+  },
+  {
+    id: 2,
+    name: "Dr. Lisa Daniels",
+    role: "Sports Psychology Advisor",
+    bio: `Lisa Daniels, Ph.D., is a Sports Psychotherapist and Certified Mental Performance Consultant® at Howard University, where she provides counseling and performance services to athletes and students. A native Washingtonian and graduate of DC Public Schools, she earned her Ph.D. in Counseling Psychology from Howard University and a Master of Teaching from the University of Virginia, with postdoctoral training in Applied Sport Psychology from the University of Western States.
+
+Dr. Daniels has been widely recognized for her contributions to Howard Athletics, including honors at the Bison Blue Carpet Awards and championship recognition from multiple MEAC-winning teams. She is the founder of Dynamic Performance Interventions, LLC, and a former athlete and traumatic brain injury survivor who is passionate about helping individuals "win on the inside." Dr. Daniels lives in the Washington, DC area with her husband, Quentin, their daughter, Madison, and their dog, Ace.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "Working with student-athletes across multiple sports has shown me that a clear sense of your \"why,\" combined with strong self-belief, is a powerful driver of resilience.",
+    image: "/images/team/lisa-daniels.jpg",
+    imagePosition: "object-[50%_80%]",
   },
 ]
 
