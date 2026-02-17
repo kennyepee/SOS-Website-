@@ -46,20 +46,6 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
   },
   {
     id: 3,
-    name: "Kwesi Abban",
-    role: "Program & Development Lead",
-    bio: `Kwesi Abban is a staff member at Strides Over Sidelines (SOS), driven by a deep belief that the values learned through sport — hard work, dedication, consistency, discipline, and passion — are the same ones that shape success in every area of life.
-
-Raised by parents who exemplified those traits daily, Kwesi carried that foundation onto the soccer field, where his consistency as a player earned him the opportunity to compete as a Division II student-athlete at California University of Pennsylvania (now PennWest California). While he may not have been the headline player, his discipline and reliability set him apart — qualities that continue to define his approach long after his playing days.
-
-Through SOS, Kwesi channels those experiences into mentoring young athletes, helping them recognize their strengths and potential both in the world's game and, most importantly, in life. His work is rooted in the belief that sport is one of the most powerful vehicles for building character, confidence, and purpose in the next generation.`,
-    question: "Biggest lesson that sports has taught you?",
-    answer: "The biggest lesson sports taught me is selflessness. While it can be difficult, sometimes in sports and in life it's not always about you. It's equally important to support and assist those around you.",
-    image: "/images/team/kwesi-abban.jpg",
-    imagePosition: "",
-  },
-  {
-    id: 4,
     name: "Kenny Epee",
     role: "Head of Technology & Strategy",
     bio: `Kenny Epee is the Head of Technology & Strategy at Strides Over Sidelines (SOS), a nonprofit focused on expanding access to high-quality athletic training, mentorship, and personal development for youth in the Washington, DC metro area.
@@ -73,6 +59,20 @@ Kenny holds a Master of Science in Information Technology Management from George
     answer: "Playing soccer opened my eyes to what I lacked as a player. I relied solely on natural talent, which got me far — but not far enough. That realization has stayed with me. Today, I bring more proactivity, more grit, more intentionality, and a hunger to win that has carried me further in every aspect of my life.",
     image: "/images/team/kenny-epee.jpg",
     imagePosition: "object-[25%_80%]",
+  },
+  {
+    id: 4,
+    name: "Kwesi Abban",
+    role: "Program & Development Lead",
+    bio: `Kwesi Abban is a staff member at Strides Over Sidelines (SOS), driven by a deep belief that the values learned through sport — hard work, dedication, consistency, discipline, and passion — are the same ones that shape success in every area of life.
+
+Raised by parents who exemplified those traits daily, Kwesi carried that foundation onto the soccer field, where his consistency as a player earned him the opportunity to compete as a Division II student-athlete at California University of Pennsylvania (now PennWest California). While he may not have been the headline player, his discipline and reliability set him apart — qualities that continue to define his approach long after his playing days.
+
+Through SOS, Kwesi channels those experiences into mentoring young athletes, helping them recognize their strengths and potential both in the world's game and, most importantly, in life. His work is rooted in the belief that sport is one of the most powerful vehicles for building character, confidence, and purpose in the next generation.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "The biggest lesson sports taught me is selflessness. While it can be difficult, sometimes in sports and in life it's not always about you. It's equally important to support and assist those around you.",
+    image: "/images/team/kwesi-abban.jpg",
+    imagePosition: "",
   },
   {
     id: 5,
@@ -102,16 +102,6 @@ Today, Alex brings the discipline, adaptability, and leadership shaped by her at
   },
   {
     id: 7,
-    name: "Melea Earley",
-    role: "",
-    bio: "",
-    question: "",
-    answer: "",
-    image: null,
-    imagePosition: "",
-  },
-  {
-    id: 8,
     name: "Jamie Joseph",
     role: "",
     bio: `Jamie Joseph is the Director of Impact and Learning for Educating for American Democracy (EAD), where she leads national efforts to strengthen the quality and reach of civic education. Her background spans research, youth programming, and classroom teaching. Jamie holds a Master of Arts in Teaching and a Bachelor of Arts in Urban Geography and Community, Youth, and Education Studies from Clark University. Her work is grounded in a commitment to history, equity, youth empowerment, and community engagement.
@@ -119,13 +109,23 @@ Today, Alex brings the discipline, adaptability, and leadership shaped by her at
 A lifelong soccer player, Jamie competed at the club and collegiate levels and spent a season playing professionally in Iceland for Afturelding FC. She currently plays for DCFC and serves as a youth coach with DC Way Academy.`,
     question: "Biggest lesson that sports has taught you?",
     answer: "The biggest lesson sports taught me is that you have to be willing to work hard and never give up. It's not always about talent, it's about the effort you put in and the dedication you have to the sport. I learned that you can always improve and that there is always room for growth.",
-    image: "/images/team/jamie joseph.jpeg",
+    image: "/images/team/jamie-joseph.jpeg",
+    imagePosition: "",
+  },
+  {
+    id: 8,
+    name: "Kaelyn Britt",
+    role: "Content Editor",
+    bio: "",
+    question: "",
+    answer: "",
+    image: null,
     imagePosition: "",
   },
   {
     id: 9,
-    name: "Kaelyn Britt",
-    role: "Content Editor",
+    name: "Melea Earley",
+    role: "",
     bio: "",
     question: "",
     answer: "",
