@@ -18,7 +18,7 @@ export function HeroSection() {
             Strides Over Sidelines (SOS)
           </p>
           <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-balance">
-            We Empower Underserved Youth Ages 8-15
+            Let's Make Strides, One Sideline at a Time
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-background/80">
             Through high-quality soccer training, mental performance education, academic support, and mentorship. Build confidence. Build discipline. Build opportunity.
