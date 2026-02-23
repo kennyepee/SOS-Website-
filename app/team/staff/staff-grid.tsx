@@ -47,7 +47,7 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
   {
     id: 3,
     name: "Kenny Epee",
-    role: "Head of Technology & Strategy",
+    role: "Head of Technology and Strategy",
     bio: `Kenny Epee is the Head of Technology & Strategy at Strides Over Sidelines (SOS), a nonprofit focused on expanding access to high-quality athletic training, mentorship, and personal development for youth in the Washington, DC metro area.
 
 With a background in information technology and systems engineering, Kenny supports SOS by building and maintaining the technical infrastructure that enables the organization's programs to operate securely, reliably, and at scale. His work is shaped by the belief that strong systems — much like strong fundamentals in sport — create the conditions for sustainable growth and impact.
