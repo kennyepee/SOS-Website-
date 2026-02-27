@@ -107,7 +107,7 @@ As a mentor, Austin focuses on helping young athletes understand that sport is n
   {
     id: 7,
     name: "William Boinest",
-    role: "",
+    role: "Partnerships Lead",
     bio: "",
     question: "",
     answer: "",
@@ -117,7 +117,7 @@ As a mentor, Austin focuses on helping young athletes understand that sport is n
   {
     id: 8,
     name: "Jamie Joseph",
-    role: "",
+    role: "Career and Academic Readiness Lead",
     bio: `Jamie Joseph is the Director of Impact and Learning for Educating for American Democracy (EAD), where she leads national efforts to strengthen the quality and reach of civic education. Her background spans research, youth programming, and classroom teaching. Jamie holds a Master of Arts in Teaching and a Bachelor of Arts in Urban Geography and Community, Youth, and Education Studies from Clark University. Her work is grounded in a commitment to history, equity, youth empowerment, and community engagement.
 
 A lifelong soccer player, Jamie competed at the club and collegiate levels and spent a season playing professionally in Iceland for Afturelding FC. She currently plays for DCFC and serves as a youth coach with DC Way Academy.`,
@@ -129,7 +129,7 @@ A lifelong soccer player, Jamie competed at the club and collegiate levels and s
   {
     id: 9,
     name: "Melea Earley",
-    role: "",
+    role: "Recruitment Lead",
     bio: `Melea Earley is a staff mentor at Strides Over Sidelines (SOS), where she is committed to helping young athletes understand that sport is not just a game — it is preparation for leadership, resilience, and impact.
 
 A four-year Division I student-athlete at Howard University and three-year team captain, Melea helped lead her program from rebuilding seasons to a conference championship and NCAA Tournament appearance. Her journey was defined not only by performance on the field but by perseverance through adversity, accountability to her teammates, and an unwavering commitment to collective success. Those experiences shaped her belief that true leadership is measured by service to others.
