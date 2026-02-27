@@ -47,7 +47,7 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
   {
     id: 3,
     name: "Kenny Epee",
-    role: "Head of Technology and Strategy",
+    role: "Head of Technology & Strategy",
     bio: `Kenny Epee is the Head of Technology & Strategy at Strides Over Sidelines (SOS), a nonprofit focused on expanding access to high-quality athletic training, mentorship, and personal development for youth in the Washington, DC metro area.
 
 With a background in information technology and systems engineering, Kenny supports SOS by building and maintaining the technical infrastructure that enables the organization's programs to operate securely, reliably, and at scale. His work is shaped by the belief that strong systems — much like strong fundamentals in sport — create the conditions for sustainable growth and impact.
@@ -92,6 +92,20 @@ Today, Alex brings the discipline, adaptability, and leadership shaped by her at
   },
   {
     id: 6,
+    name: "Austin Hood",
+    role: "Partnerships Lead",
+    bio: `Austin Hood is a media professional and former collegiate soccer player dedicated to empowering the next generation of athletes through mentorship, leadership, and creative storytelling. A 2023 graduate with a degree in Media & Communication Studies, Austin played Division I soccer at La Salle University, where he developed the discipline, resilience, and team-first mindset that continue to guide his work today.
+
+Following his playing career, Austin transitioned into the sports media and broadcasting industry, contributing to live production and content creation for organizations including the Baltimore Ravens, Baltimore Orioles, Navy Athletics, and international events such as the FIFA World Cup. His experience working behind the scenes in professional and global sports environments gives him a unique perspective on the opportunities available within and beyond athletics.
+
+As a mentor, Austin focuses on helping young athletes understand that sport is not only a pathway for competition, but also a foundation for personal development, creative exploration, and professional opportunity. He is passionate about guiding youth to build confidence, expand their horizons, and recognize the value of their identity both on and off the field.`,
+    question: "",
+    answer: "",
+    image: "/images/team/austin-hood.jpg",
+    imagePosition: "",
+  },
+  {
+    id: 7,
     name: "William Boinest",
     role: "",
     bio: "",
@@ -101,7 +115,7 @@ Today, Alex brings the discipline, adaptability, and leadership shaped by her at
     imagePosition: "",
   },
   {
-    id: 7,
+    id: 8,
     name: "Jamie Joseph",
     role: "",
     bio: `Jamie Joseph is the Director of Impact and Learning for Educating for American Democracy (EAD), where she leads national efforts to strengthen the quality and reach of civic education. Her background spans research, youth programming, and classroom teaching. Jamie holds a Master of Arts in Teaching and a Bachelor of Arts in Urban Geography and Community, Youth, and Education Studies from Clark University. Her work is grounded in a commitment to history, equity, youth empowerment, and community engagement.
@@ -113,19 +127,25 @@ A lifelong soccer player, Jamie competed at the club and collegiate levels and s
     imagePosition: "",
   },
   {
-    id: 8,
-    name: "Kaelyn Britt",
-    role: "Content Editor",
-    bio: "",
-    question: "",
-    answer: "",
-    image: null,
-    imagePosition: "",
-  },
-  {
     id: 9,
     name: "Melea Earley",
     role: "",
+    bio: `Melea Earley is a staff mentor at Strides Over Sidelines (SOS), where she is committed to helping young athletes understand that sport is not just a game — it is preparation for leadership, resilience, and impact.
+
+A four-year Division I student-athlete at Howard University and three-year team captain, Melea helped lead her program from rebuilding seasons to a conference championship and NCAA Tournament appearance. Her journey was defined not only by performance on the field but by perseverance through adversity, accountability to her teammates, and an unwavering commitment to collective success. Those experiences shaped her belief that true leadership is measured by service to others.
+
+Beyond athletics, Melea graduated with a degree in Environmental Studies and Sociology and continues her graduate studies in sustainability and public leadership. Whether in the classroom, on the field, or in her community, she is passionate about mentorship, particularly for young women and students from underrepresented backgrounds who may not always see themselves reflected in leadership spaces.
+
+Through SOS, Melea mentors with intention, helping athletes translate the discipline, confidence, and resilience they build in sport into lifelong tools for success. She believes the lessons learned between the lines extend far beyond the game, shaping purpose, character, and the courage to lead in every arena of life.`,
+    question: "Biggest lesson sports have taught you?",
+    answer: "The biggest lesson sports taught me is to control the controllables. In soccer and life, you can't always control the outcome, but you can control your attitude, how you show up for others, and your discipline. I learned that your response to adversity shapes trust more than my performance ever could. This mindset helped me get through many tough times and kept me grounded, knowing that no matter what, I was showing up and doing my best, regardless of the outcome. It made me proud of the work and effort I was putting in on a daily basis, and eventually made those around me want to hold themselves accountable to a higher standard. Talent may open doors in life, but your character is what keeps them open!",
+    image: "/images/team/melea-earley.jpeg",
+    imagePosition: "",
+  },
+  {
+    id: 10,
+    name: "Kaelyn Britt",
+    role: "Content Editor",
     bio: "",
     question: "",
     answer: "",
