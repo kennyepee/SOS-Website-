@@ -25,7 +25,7 @@ const advisors = [
   {
     id: 2,
     name: "Dr. Lisa Daniels",
-    role: "Sports Psychology Advisor",
+    role: "Sports Performance Advisor",
     bio: `Lisa Daniels, Ph.D., is a Sports Psychotherapist and Certified Mental Performance Consultant® at Howard University, where she provides counseling and performance services to athletes and students. A native Washingtonian and graduate of DC Public Schools, she earned her Ph.D. in Counseling Psychology from Howard University and a Master of Teaching from the University of Virginia, with postdoctoral training in Applied Sport Psychology from the University of Western States.
 
 Dr. Daniels has been widely recognized for her contributions to Howard Athletics, including honors at the Bison Blue Carpet Awards and championship recognition from multiple MEAC-winning teams. She is the founder of Dynamic Performance Interventions, LLC, and a former athlete and traumatic brain injury survivor who is passionate about helping individuals "win on the inside." Dr. Daniels lives in the Washington, DC area with her husband, Quentin, their daughter, Madison, and their dog, Ace.`,
@@ -33,6 +33,20 @@ Dr. Daniels has been widely recognized for her contributions to Howard Athletics
     answer: "Working with student-athletes across multiple sports has shown me that a clear sense of your \"why,\" combined with strong self-belief, is a powerful driver of resilience.",
     image: "/images/team/lisa-daniels.jpg",
     imagePosition: "object-[50%_80%]",
+  },
+  {
+    id: 3,
+    name: "Deonte Young",
+    role: "Student Services Advisor",
+    bio: `Deonte Young is an advisor at Strides Over Sidelines (SOS), bringing years of experience in student support, school counseling, and youth development to the organization's mission.
+
+Deonte serves as a Director of Student Services in Fairfax County Public Schools, where he oversees a comprehensive school counseling program centered on equity, access, and opportunity for all students. His approach is grounded in the belief that strong relationships and meaningful partnerships among all stakeholders are essential to student success. In his former role as a Systems of Support Advisor, he supported school communities by implementing targeted behavioral and academic interventions as well as social and emotional learning initiatives.
+
+A native of North Carolina now based in Washington, DC, Deonte holds a Bachelor's degree in Political Science from Virginia Commonwealth University, a Master's degree in Counselor Education from VCU, and a Master's degree in Education Leadership from George Mason University. Through SOS, he brings that deep background in student advocacy and educational leadership to help shape programming that meets young people where they are and prepares them for where they're going.`,
+    question: "",
+    answer: "",
+    image: "/images/team/deonte-young.jpg",
+    imagePosition: "",
   },
 ]
 

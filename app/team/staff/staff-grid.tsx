@@ -47,8 +47,8 @@ When she's not coaching, mentoring, or building programs, Asia can be found at a
   {
     id: 3,
     name: "Kenny Epee",
-    role: "Head of Technology & Strategy",
-    bio: `Kenny Epee is the Head of Technology & Strategy at Strides Over Sidelines (SOS), a nonprofit focused on expanding access to high-quality athletic training, mentorship, and personal development for youth in the Washington, DC metro area.
+    role: "Head of Technology, Strategy & Governance",
+    bio: `Kenny Epee is the Head of Technology, Strategy & Governance at Strides Over Sidelines (SOS), a nonprofit focused on expanding access to high-quality athletic training, mentorship, and personal development for youth in the Washington, DC metro area.
 
 With a background in information technology and systems engineering, Kenny supports SOS by building and maintaining the technical infrastructure that enables the organization's programs to operate securely, reliably, and at scale. His work is shaped by the belief that strong systems — much like strong fundamentals in sport — create the conditions for sustainable growth and impact.
 
@@ -62,22 +62,8 @@ Kenny holds a Master of Science in Information Technology Management from George
   },
   {
     id: 4,
-    name: "Kwesi Abban",
-    role: "Program & Development Lead",
-    bio: `Kwesi Abban is a staff member at Strides Over Sidelines (SOS), driven by a deep belief that the values learned through sport — hard work, dedication, consistency, discipline, and passion — are the same ones that shape success in every area of life.
-
-Raised by parents who exemplified those traits daily, Kwesi carried that foundation onto the soccer field, where his consistency as a player earned him the opportunity to compete as a Division II student-athlete at California University of Pennsylvania (now PennWest California). While he may not have been the headline player, his discipline and reliability set him apart — qualities that continue to define his approach long after his playing days.
-
-Through SOS, Kwesi channels those experiences into mentoring young athletes, helping them recognize their strengths and potential both in the world's game and, most importantly, in life. His work is rooted in the belief that sport is one of the most powerful vehicles for building character, confidence, and purpose in the next generation.`,
-    question: "Biggest lesson that sports has taught you?",
-    answer: "The biggest lesson sports taught me is selflessness. While it can be difficult, sometimes in sports and in life it's not always about you. It's equally important to support and assist those around you.",
-    image: "/images/team/kwesi-abban.jpg",
-    imagePosition: "",
-  },
-  {
-    id: 5,
     name: "Alex West",
-    role: "Content Manager",
+    role: "Head of Communications, Media & Brand",
     bio: `Alex West is a staff member at Strides Over Sidelines (SOS), bringing a lifelong connection to sport and a professional background in data and operations systems to the organization's mission.
 
 An athlete since the age of four, Alex grew up in an era of limited opportunities for girls in sports, often competing alongside boys across multiple positions until the age of twelve. Those early experiences taught her how to face adversity head-on, challenge stereotypes, and build resilience in environments where she wasn't always expected to succeed.
@@ -88,6 +74,20 @@ Today, Alex brings the discipline, adaptability, and leadership shaped by her at
     question: "",
     answer: "",
     image: "/images/team/alex-west.jpg",
+    imagePosition: "",
+  },
+  {
+    id: 5,
+    name: "Kwesi Abban",
+    role: "Program & Development Lead",
+    bio: `Kwesi Abban is a staff member at Strides Over Sidelines (SOS), driven by a deep belief that the values learned through sport — hard work, dedication, consistency, discipline, and passion — are the same ones that shape success in every area of life.
+
+Raised by parents who exemplified those traits daily, Kwesi carried that foundation onto the soccer field, where his consistency as a player earned him the opportunity to compete as a Division II student-athlete at California University of Pennsylvania (now PennWest California). While he may not have been the headline player, his discipline and reliability set him apart — qualities that continue to define his approach long after his playing days.
+
+Through SOS, Kwesi channels those experiences into mentoring young athletes, helping them recognize their strengths and potential both in the world's game and, most importantly, in life. His work is rooted in the belief that sport is one of the most powerful vehicles for building character, confidence, and purpose in the next generation.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "The biggest lesson sports taught me is selflessness. While it can be difficult, sometimes in sports and in life it's not always about you. It's equally important to support and assist those around you.",
+    image: "/images/team/kwesi-abban.jpg",
     imagePosition: "",
   },
   {
@@ -108,7 +108,13 @@ As a mentor, Austin focuses on helping young athletes understand that sport is n
     id: 7,
     name: "William Boinest",
     role: "Partnerships Lead",
-    bio: "",
+    bio: `William Boinest is a former Division I soccer player and staff member at Strides Over Sidelines (SOS), bringing the discipline, resilience, and teamwork forged through years of elite competition into a commitment to youth development and sports equity.
+
+As a standout youth athlete with BRYC 99 Elite, William helped secure the Virginia State Cup championship and the U.S. Youth Soccer National Championship in 2017, along with the 2016 Jefferson Cup Elite Division title. Selected for the Virginia State Olympic Development Program (ODP) Team, he competed against top players from across the nation and was later chosen for a select squad that traveled to Holland and Belgium to face premier European academies. At McLean High School, he earned a spot on the varsity team as a freshman and competed for three seasons before being recruited to play Division I soccer at American University, where he appeared in nine matches during his freshman year. Injuries ultimately cut his collegiate career short after two seasons, though he made a brief return at the semi-professional level with North Stars SC in the United Premier Soccer League (UPSL) from 2024 to 2025.
+
+William graduated from American University in 2022 with a Bachelor's in Business Administration specializing in Finance. He launched his sales career at memoryBlue as a Sales Development Representative before joining ZoomInfo in 2023, a publicly traded data and AI company and leader in the go-to-market space. At ZoomInfo, he excelled as a top-performing SDR, consistently exceeding targets and earning recognition for his outbound prospecting and strategic approach. He advanced to ZI Labs Professional Services Sales Manager as part of the consulting and innovation hub before being promoted to Account Manager, where he drives strategic growth for clients through data intelligence, professional services, and innovative AI and GTM solutions.
+
+Committed to giving back to the sport that shaped him, William served as a part-time coach with Golden Boot Soccer from 2024 to 2025, focused on building fundamental skills and instilling teamwork in players aged 3–12. In the same spirit, he now serves as a Founding Member at Strides Over Sidelines, dedicated to enhancing sports equity by providing high-quality opportunities for middle school students.`,
     question: "",
     answer: "",
     image: "/images/team/william-boinest.jpg",
@@ -151,6 +157,34 @@ Through SOS, Melea mentors with intention, helping athletes translate the discip
     answer: "",
     image: null,
     imagePosition: "",
+  },
+  {
+    id: 11,
+    name: "Wunayeto McKazamba",
+    role: "Communications Lead",
+    bio: `Wunayeto McKazamba is the Communications Lead at Strides Over Sidelines (SOS), where he helps shape the organization's messaging, storytelling, and community outreach. In this role, he supports efforts to amplify SOS's mission of expanding access to sports mentorship, leadership development, and life opportunities for underserved youth.
+
+Wunayeto brings more than six years of experience in sales, customer engagement, and relationship management. His background in communications and marketing has equipped him with strong skills in public engagement, strategic messaging, and building meaningful connections with diverse audiences.
+
+At SOS, Wunayeto focuses on strengthening the organization's public voice, supporting program visibility, and helping build relationships with students, families, volunteers, and community partners. Through thoughtful communication and outreach, he works to ensure the impact and vision of SOS are clearly shared with the communities it serves.`,
+    question: "",
+    answer: "",
+    image: "/images/team/wunayeto-mckazamba.jpg",
+    imagePosition: "object-[50%_20%]",
+  },
+  {
+    id: 12,
+    name: "Farah Jean",
+    role: "Strategic Planning and Compliance Lead",
+    bio: `Farah A. Jean is the Strategic Planning and Compliance Lead at Strides Over Sidelines (SOS), where she supports the organization's operational foundation through her background in law, policy, and organizational governance.
+
+Originally from Haiti, Farah is a recent graduate of the University of Connecticut School of Law and currently serves as a Judicial Law Clerk for the Connecticut Superior Court. She holds a Bachelor's degree in Political Science with a minor in Event Management from the University of Florida. Her legal training includes hands-on experience in the Disability Law Clinic, Transactional Law Clinic, and judicial internships with The Hartford and the United States Bankruptcy Court.
+
+A dedicated student leader, Farah held multiple leadership roles including Co-President of her local BLSA chapter and the 57th NEBLSA Connecticut Sub-Regional Director. Having worked with children through various organizations and roles since high school, she brings a deep commitment to youth-centered work and ensuring SOS has the strategic and compliance infrastructure to grow its mission.`,
+    question: "",
+    answer: "",
+    image: "/images/team/farah-jean.jpg",
+    imagePosition: "object-[70%_0%] scale-[2] origin-[70%_0%]",
   },
 ]
 

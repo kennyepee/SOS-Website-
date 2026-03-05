@@ -16,7 +16,13 @@ const boardMembers = [
     id: 1,
     name: "Aayush Raman",
     role: "",
-    bio: "",
+    bio: `Aayush Raman is a medical student at NYIT College of Osteopathic Medicine and a member of the Strides Over Sidelines (SOS) Board of Directors, bringing a longstanding commitment to youth mentorship, community service, and athletic development.
+
+Aayush holds a multidisciplinary background in neuroscience, data analytics, and healthcare leadership, along with hands-on experience working with young people in both educational and athletic settings. He has served as a high-level youth player, team captain, and later a coach — experiences that shaped his belief in sports as a powerful tool for building confidence, discipline, and resilience in adolescents.
+
+Through his work as a volunteer tutor, crisis counselor, youth mentor, and chair of his medical school's free clinic, Aayush has supported students navigating academic pressure, personal challenges, and goal setting beyond the field. He is passionate about expanding access to soccer for students while helping them develop the life skills, mental well-being, and long-term vision needed for success on and off the field.
+
+As a board member, Aayush is dedicated to advancing programs that integrate athletics with mentorship, evidence-based research, education, and holistic youth development.`,
     question: "",
     answer: "",
     image: "/images/team/aayush-raman.jpg",
@@ -42,7 +48,15 @@ Based in Washington, DC, Jane brings her passion for soccer, youth development, 
     id: 3,
     name: "Geoff King",
     role: "",
-    bio: "",
+    bio: `Geoffrey King is the founder and president of PASS (Preparing All Students for Success) and a member of the Strides Over Sidelines (SOS) Board of Directors, bringing nearly two decades of experience as an educator and youth advocate in Washington, DC.
+
+After earning a Bachelor of Science in Human Nutrition, Foods, and Exercise with a minor in Chemistry from Virginia Tech, Geoffrey began his career in the management program at Enterprise Holdings before following his passion for education. He founded Math Doctors, LLC, a math tutoring company that quickly became one of Northern Virginia's premier tutoring services, and went on to earn a Master of Education from Howard University.
+
+For nearly 20 years, Geoffrey has served as a classroom teacher in Ward 8 of Washington, DC within the District of Columbia Public Schools. Through that experience, he identified a critical gap in the essential life skills his students needed for success beyond high school and college — and in 2017, he founded PASS to address it.
+
+PASS is a nonprofit committed to developing urban youth aged 10 to 21, with programming focused on financial literacy, career goal setting, college and vocational exposure, and mentorship. The organization pairs students with community mentors and provides hands-on learning around budgeting, credit, interview skills, and professional development — targeting low-income families in Wards 7 and 8.
+
+Geoffrey's vision is to create a generational pipeline of life skills and knowledge, fostering a culture where these essential tools are passed down to ensure the long-term prosperity of Washington, DC's underserved youth.`,
     question: "",
     answer: "",
     image: "/images/team/geoff-king.jpg",
