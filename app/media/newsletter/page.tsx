@@ -1,31 +1,9 @@
-"use client"
-
-import React from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import Link from "next/link"
-import { useState } from "react"
-import { Mail, ArrowLeft, CheckCircle, Send } from "lucide-react"
-
-const newsletterBenefits = [
-  "Program updates and announcements",
-  "Mentor and participant highlights",
-  "Upcoming sessions and opportunities",
-  "Impact and growth milestones",
-]
+import { Mail, ArrowLeft } from "lucide-react"
 
 export default function NewsletterPage() {
-  const [email, setEmail] = useState("")
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
-  }
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -47,73 +25,22 @@ export default function NewsletterPage() {
                 </div>
               </div>
               <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                Stay Connected
+                Newsletter
               </h1>
-              <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                The SOS Newsletter provides periodic updates on programs, impact, opportunities to get involved, and stories from our community.
-              </p>
             </div>
           </div>
         </section>
 
-        {/* What You'll Receive */}
+        {/* Coming Soon */}
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl">
-              <h2 className="font-serif text-2xl font-bold text-foreground">Subscribers receive:</h2>
-              <div className="mt-6 space-y-4">
-                {newsletterBenefits.map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-muted-foreground italic">
-                We respect your inbox and only send relevant updates.
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Coming Soon
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Our newsletter is currently in the works. Check back soon for updates on programs, impact stories, and ways to get involved.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Sign Up Form */}
-        <section className="py-20 lg:py-28 bg-muted">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-md">
-              <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
-                  Sign Up for the Newsletter
-                </h2>
-              </div>
-
-              {submitted ? (
-                <div className="p-8 rounded-xl bg-primary/10 text-center">
-                  <div className="mx-auto h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                    <Send className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-lg text-foreground">You're Subscribed!</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Thank you for signing up. You'll hear from us soon.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6 p-8 rounded-2xl bg-card border border-border">
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="your@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <Button type="submit" size="lg" className="w-full">
-                    Subscribe
-                  </Button>
-                </form>
-              )}
             </div>
           </div>
         </section>

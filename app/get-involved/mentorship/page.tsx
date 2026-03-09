@@ -1,15 +1,9 @@
-"use client"
-
 import React from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
 import Link from "next/link"
-import { useState } from "react"
-import { Users, ArrowLeft, CheckCircle, Send } from "lucide-react"
+import { Users, ArrowLeft, CheckCircle } from "lucide-react"
 
 const mentorResponsibilities = [
   "Building consistent, positive relationships",
@@ -19,27 +13,6 @@ const mentorResponsibilities = [
 ]
 
 export default function MentorshipPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    background: "",
-    motivation: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    const subject = encodeURIComponent('[SOS] Mentor Application')
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'N/A'}\n\nSoccer Background:\n${formData.background}\n\nWhy I Want to Be a Mentor:\n${formData.motivation}`
-    )
-    
-    window.location.href = `mailto:Stridesoversidelines@gmail.com?subject=${subject}&body=${body}`
-    setSubmitted(true)
-  }
-
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -93,94 +66,23 @@ export default function MentorshipPage() {
           </div>
         </section>
 
-        {/* Application Form */}
+        {/* Application CTA */}
         <section className="py-20 lg:py-28 bg-muted">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl">
-              <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                  Become a Mentor
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  Fill out the form below to express your interest.
-                </p>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Become a Mentor
+              </h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Ready to make an impact? Fill out our mentor application to get started.
+              </p>
+              <div className="mt-10">
+                <Button asChild size="lg">
+                  <a href="https://docs.google.com/forms/d/1QdbmhsV2eMwuzZdsrU_6r7OOUwfMRQ0zL3ksHsOE5vk/edit" target="_blank" rel="noopener noreferrer">
+                    Apply Now
+                  </a>
+                </Button>
               </div>
-
-              {submitted ? (
-                <div className="p-8 rounded-xl bg-primary/10 text-center">
-                  <div className="mx-auto h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                    <Send className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-lg text-foreground">Almost There!</h3>
-                  <p className="mt-2 text-muted-foreground">
-                    Your email app should have opened with your application pre-filled. Please confirm and hit send in your email app to complete your submission. We'll be in touch soon.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6 p-8 rounded-2xl bg-card border border-border">
-                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input
-                        id="name"
-                        placeholder="Your full name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="your@email.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      placeholder="(555) 555-5555"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="background">Soccer Background</Label>
-                    <Textarea
-                      id="background"
-                      placeholder="Tell us about your soccer experience (collegiate, professional, coaching, etc.)"
-                      rows={4}
-                      value={formData.background}
-                      onChange={(e) => setFormData({ ...formData, background: e.target.value })}
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="motivation">Why do you want to be a mentor?</Label>
-                    <Textarea
-                      id="motivation"
-                      placeholder="Share why you're interested in mentoring with SOS..."
-                      rows={4}
-                      value={formData.motivation}
-                      onChange={(e) => setFormData({ ...formData, motivation: e.target.value })}
-                      required
-                    />
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full">
-                    Submit Interest
-                  </Button>
-                </form>
-              )}
             </div>
           </div>
         </section>

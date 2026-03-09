@@ -95,10 +95,13 @@ export function Header() {
             >
               {item.children ? (
                 <>
-                  <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-md hover:bg-gray-50 transition-colors">
+                  <Link
+                    href={item.href}
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-md hover:bg-gray-50 transition-colors"
+                  >
                     {item.name}
                     <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
-                  </button>
+                  </Link>
                   {openDropdown === item.name && (
                     <div className="absolute left-0 top-full pt-1 w-52 z-50">
                       <div className="rounded-lg bg-white border border-gray-100 shadow-lg">
@@ -139,13 +142,21 @@ export function Header() {
               <div key={item.name}>
                 {item.children ? (
                   <div>
-                    <button
-                      onClick={() => setMobileOpenDropdown(mobileOpenDropdown === item.name ? null : item.name)}
-                      className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
-                    >
-                      {item.name}
-                      <ChevronDown className={`h-4 w-4 transition-transform ${mobileOpenDropdown === item.name ? 'rotate-180' : ''}`} />
-                    </button>
+                    <div className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+                      <Link
+                        href={item.href}
+                        className="flex-1"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                      <button
+                        onClick={() => setMobileOpenDropdown(mobileOpenDropdown === item.name ? null : item.name)}
+                        className="p-1"
+                      >
+                        <ChevronDown className={`h-4 w-4 transition-transform ${mobileOpenDropdown === item.name ? 'rotate-180' : ''}`} />
+                      </button>
+                    </div>
                     {mobileOpenDropdown === item.name && (
                       <div className="ml-4 space-y-1 mt-1">
                         {item.children.map((child) => (
