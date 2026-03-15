@@ -42,7 +42,7 @@ Based in Washington, DC, Jane brings her passion for soccer, youth development, 
     question: "Biggest lesson that sports has taught you?",
     answer: "The biggest lesson sports taught me is that it isn't all about you — and that realizing this can actually deepen your sense of purpose and passion. Being part of a team showed me what it means to commit to something bigger than yourself: to show up consistently, to push your limits, and sometimes to put your body on the line in service of a shared goal. In those moments, effort becomes meaningful not because of individual recognition, but because it supports the people around you. Through sport, I learned that I could care more deeply and lead more authentically when my energy was rooted in community. Supporting teammates, celebrating collective success, and pushing through challenges together revealed the power of trust, accountability, and belonging. That lesson has stayed with me far beyond the field, shaping how I lead, how I build relationships, and what continues to motivate me personally and professionally today.",
     image: "/images/team/jane-wallis.jpg",
-    imagePosition: "",
+    imagePosition: "object-top scale-[1.25] origin-top",
   },
   {
     id: 3,
