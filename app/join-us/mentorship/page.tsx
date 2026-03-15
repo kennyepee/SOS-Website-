@@ -181,7 +181,7 @@ export default function MentorshipPage() {
               </p>
               <div className="mt-10">
                 <Button asChild size="lg">
-                  <a href="https://docs.google.com/forms/d/1QdbmhsV2eMwuzZdsrU_6r7OOUwfMRQ0zL3ksHsOE5vk/edit" target="_blank" rel="noopener noreferrer">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHmQ6kNG1GvzwAyykcVedTDwmkoXVugvY4Vn4x3WhH-I4eVA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
                     Apply Now
                   </a>
                 </Button>

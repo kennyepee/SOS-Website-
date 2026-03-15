@@ -186,6 +186,16 @@ A dedicated student leader, Farah held multiple leadership roles including Co-Pr
     image: "/images/team/farah-jean.jpg",
     imagePosition: "object-[70%_0%] scale-[2] origin-[70%_0%]",
   },
+  {
+    id: 13,
+    name: "Ian Wheeler",
+    role: "Curriculum Lead",
+    bio: `Ian Wheeler joined SOS in the spring of 2026. He is a Howard graduate and professional athlete. Ian is an advocate for mental health and plans to pursue medicine following his football career. He is currently a Board member of a local non profit with a focus on the health of middle school age students through athletics and mentorship. He's beyond excited to help in our venture to uplift our community through sports, education, and mentorship!`,
+    question: "",
+    answer: "",
+    image: "/images/team/ian-wheeler.jpeg",
+    imagePosition: "object-[30%_15%]",
+  },
 ]
 
 type StaffMember = (typeof staffMembers)[number]
