@@ -150,16 +150,6 @@ Through SOS, Melea mentors with intention, helping athletes translate the discip
   },
   {
     id: 10,
-    name: "Kaelyn Britt",
-    role: "Content Editor",
-    bio: "",
-    question: "",
-    answer: "",
-    image: null,
-    imagePosition: "",
-  },
-  {
-    id: 11,
     name: "Wunayeto McKazamba",
     role: "Communications Lead",
     bio: `Wunayeto McKazamba is the Communications Lead at Strides Over Sidelines (SOS), where he helps shape the organization's messaging, storytelling, and community outreach. In this role, he supports efforts to amplify SOS's mission of expanding access to sports mentorship, leadership development, and life opportunities for underserved youth.
@@ -195,6 +185,16 @@ A dedicated student leader, Farah held multiple leadership roles including Co-Pr
     answer: "",
     image: "/images/team/ian-wheeler.jpeg",
     imagePosition: "object-[30%_15%]",
+  },
+  {
+    id: 14,
+    name: "Kaelyn Britt",
+    role: "Content Editor",
+    bio: "",
+    question: "",
+    answer: "",
+    image: null,
+    imagePosition: "",
   },
 ]
 
