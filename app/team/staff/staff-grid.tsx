@@ -66,13 +66,13 @@ Kenny holds a Master of Science in Information Technology Management from George
     role: "Head of Communications, Media & Brand",
     bio: `Alex West is a staff member at Strides Over Sidelines (SOS), bringing a lifelong connection to sport and a professional background in data and operations systems to the organization's mission.
 
-An athlete since the age of four, Alex grew up in an era of limited opportunities for girls in sports, often competing alongside boys across multiple positions until the age of twelve. Those early experiences taught her how to face adversity head-on, challenge stereotypes, and build resilience in environments where she wasn't always expected to succeed.
+Sports have been a part of Alex's life since she was four years old. Growing up in the 2000s, when opportunities for girls in sports were more limited, she played alongside boys in multiple positions until she was twelve. Those early experiences shaped her competitive drive and strengthened her ability to persevere in environments where she wasn't always expected to succeed.
 
-Transitioning to girls' teams brought its own challenges — pushing her to adapt quickly, embrace the unknown, and consistently exceed expectations. That drive carried her to the University of Vermont, where she competed as a Division I soccer player and continued to develop as both an athlete and a leader.
+She went on to play Division I soccer at the University of Vermont, where she continued to grow as both an athlete and a leader. The discipline, adaptability, and resilience she developed through sports continue to influence her work today as a Data and Operations Systems Manager.
 
-Today, Alex brings the discipline, adaptability, and leadership shaped by her athletic career into her role as a Data and Operations Systems Manager and into her work with SOS. She is passionate about passing those lessons on to the next generation — helping create opportunities that allow young athletes to grow, compete, and reach their full potential.`,
-    question: "",
-    answer: "",
+Through SOS, Alex is passionate about helping create opportunities for the next generation of athletes — ensuring that every child has the chance to grow, compete, and reach their full potential through sport.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "Sports taught me how to be resilient in uncomfortable situations. Whether competing alongside boys when opportunities were limited or pushing myself at the Division I level, I learned that growth happens when you lean into challenges instead of avoiding them.",
     image: "/images/team/alex-west.jpg",
     imagePosition: "",
   },
@@ -188,6 +188,42 @@ A dedicated student leader, Farah held multiple leadership roles including Co-Pr
   },
   {
     id: 14,
+    name: "Yeethiopia Tadesse",
+    role: "Strategy & Operations Coordinator",
+    bio: "",
+    question: "",
+    answer: "",
+    image: "/images/team/yeethiopia-tadesse.jpeg",
+    imagePosition: "",
+  },
+  {
+    id: 15,
+    name: "Ty Triche",
+    role: "Curriculum Lead",
+    bio: `Ty Triche is a staff member at Strides Over Sidelines (SOS), bringing the discipline and perseverance developed through years of competitive swimming to the organization's mission of youth development through sport.
+
+A swimmer at Howard University, Ty served as a two-time captain of the historic Howard Men's Swim and Dive team, helping lead the program to back-to-back NEC Conference Championships. He was also a scoring member at each NEC Swim and Dive Championship meet during his time with the Bison.
+
+Originally from Humble, Texas, Ty is a graduating senior at Howard University, where he will earn a B.S. in Biology with a minor in Chemistry. He plans to attend medical school with the long-term goal of becoming an anesthesiologist, helping ensure safe and comfortable surgeries for patients in need.
+
+Although Ty can barely kick a soccer ball, he is deeply passionate about the mission of Strides Over Sidelines. He joined SOS to help provide a space where youth can gain greater access to sports while also developing the tools needed to become not only the best athletes they can be, but the best people they can be.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "The biggest lesson my sport has taught me is perseverance. Swimming has been one of the hardest things I have ever done in my life, but my love for the sport has always been greater. Through every hardship the sport brought me, I learned how to push through and keep going. This mindset has carried over into every other part of my life. A good friend of mine once said that when he faces challenges, he tells himself, \"This won't hurt more than a 200 freestyle.\" Honestly, I agree. If I can push through a 200 free, I can push through just about anything I set my mind to.",
+    image: "/images/team/ty-triche.jpeg",
+    imagePosition: "object-[50%_10%]",
+  },
+  // {
+  //   id: 16,
+  //   name: "Andrew Fitz",
+  //   role: "",
+  //   bio: "",
+  //   question: "",
+  //   answer: "",
+  //   image: null,
+  //   imagePosition: "",
+  // },
+  {
+    id: 17,
     name: "Kaelyn Britt",
     role: "Content Editor",
     bio: "",
