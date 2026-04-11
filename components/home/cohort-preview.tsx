@@ -15,7 +15,7 @@ export function CohortPreview() {
               2026 Summer Cohort
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Our first full summer cohort will launch in 2026, bringing together youth, mentors, and coaches for an immersive program focused on growth, leadership, and long-term development, alongside college and professional training sessions designed to expose participants to higher-level pathways and standards.
+              Our first full summer cohort will launch in 2026 for players U10–U14, bringing together youth, mentors, and coaches for an immersive program focused on growth, leadership, and long-term development, alongside college and professional training sessions designed to expose participants to higher-level pathways and standards.
             </p>
             <div className="mt-8">
               <Button asChild size="lg">

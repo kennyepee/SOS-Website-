@@ -2,11 +2,11 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Calendar, Users, Trophy, Brain, GraduationCap, MapPin, Clock, CheckCircle, Heart, Mail } from "lucide-react"
+import { Calendar, Users, Trophy, Brain, GraduationCap, MapPin, Clock, CheckCircle, Heart, Mail, UserRound } from "lucide-react"
 
 export const metadata = {
   title: "2026 Summer Cohort | Strides Over Sidelines",
-  description: "Apply for the Strides Over Sidelines 2026 Summer Cohort - an eight-week, mentorship-driven program designed to support youth development.",
+  description: "Apply for the Strides Over Sidelines 2026 Summer Cohort (U10–U14) — an eight-week, mentorship-driven program designed to support youth development.",
 }
 
 const programFocus = [
@@ -27,6 +27,7 @@ const whoShouldApply = [
 
 const programDetails = [
   { icon: Calendar, label: "Program Length", value: "8 weeks (Summer 2026)" },
+  { icon: UserRound, label: "Age Range", value: "U10–U14 (accepting applications)" },
   { icon: Clock, label: "Guaranteed Sessions", value: "One session per week" },
   { icon: MapPin, label: "Location", value: "DC metro area (Arlington & DC)" },
   { icon: Users, label: "Cohort Size", value: "Limited to maintain quality" },
@@ -48,7 +49,7 @@ export default function SummerCohortPage() {
                 2026 Summer Cohort
               </h1>
               <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                An eight-week, mentorship-driven program designed to support youth development through soccer, leadership, and mental performance.
+                An eight-week, mentorship-driven program designed to support youth development through soccer, leadership, and mental performance. We are accepting applications for the U10–U14 age range.
               </p>
               <div className="mt-10">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
@@ -108,7 +109,7 @@ export default function SummerCohortPage() {
                 Who Should Apply
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                This program is designed for youth who:
+                This program is designed for youth in the U10–U14 age range who:
               </p>
               <div className="mt-8 space-y-4">
                 {whoShouldApply.map((item, index) => (
