@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Heart, CheckCircle } from "lucide-react"
 import { DonationForm } from "./donation-form"
+import { ZelleDonationCard } from "./zelle-donation-card"
 
 const impactAreas = [
   "Program Delivery — Coaching, curriculum materials, and student support",
@@ -47,8 +48,19 @@ export default function DonatePage() {
         {/* Donation Form */}
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-lg">
+            <div className="mx-auto max-w-lg space-y-10">
               <DonationForm />
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center" aria-hidden>
+                  <span className="w-full border-t border-border" />
+                </div>
+                <div className="relative flex justify-center text-xs font-medium uppercase tracking-wider">
+                  <span className="bg-background px-3 text-muted-foreground">
+                    Or donate with Zelle
+                  </span>
+                </div>
+              </div>
+              <ZelleDonationCard />
             </div>
           </div>
         </section>
