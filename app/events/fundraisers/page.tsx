@@ -74,11 +74,11 @@ export default function FundraisersPage() {
                 Support Our Mission
               </h2>
               <p className="mt-6 text-lg text-primary-foreground/80">
-                Can't attend an event? You can still make a difference. Online donations are coming soon.
+                Can't attend an event? You can still make a difference with an online donation.
               </p>
               <div className="mt-10">
                 <Button asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                  <Link href="/donate">Donate — Coming Soon</Link>
+                  <Link href="/donate">Donate Now</Link>
                 </Button>
               </div>
             </div>

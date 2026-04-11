@@ -48,7 +48,7 @@ export function CtaSection() {
                 Your support helps SOS deliver high-quality soccer training, mentorship, and mental performance tools to underserved youth.
               </p>
               <Button asChild className="mt-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                <Link href="/donate">Donate — Coming Soon</Link>
+                <Link href="/donate">Donate Now</Link>
               </Button>
             </div>
             {/* Decorative element */}

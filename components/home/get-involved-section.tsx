@@ -20,8 +20,8 @@ const involvementPaths = [
   {
     icon: Heart,
     title: "Donate",
-    description: "Online donations are coming soon. Contact us to learn how you can support our mission today.",
-    cta: "Coming Soon",
+    description: "Support our mission by making a one-time or monthly donation to help underserved youth thrive.",
+    cta: "Donate Now",
     href: "/donate",
   },
 ]

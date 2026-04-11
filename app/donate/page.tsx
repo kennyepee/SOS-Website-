@@ -3,7 +3,8 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Heart, Clock, Mail, CheckCircle } from "lucide-react"
+import { Heart, CheckCircle } from "lucide-react"
+import { DonationForm } from "./donation-form"
 
 const impactAreas = [
   "Program Delivery — Coaching, curriculum materials, and student support",
@@ -43,34 +44,11 @@ export default function DonatePage() {
           </div>
         </section>
 
-        {/* Coming Soon Notice */}
+        {/* Donation Form */}
         <section className="py-20 lg:py-28">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-8">
-                <Clock className="h-4 w-4" />
-                <span className="text-sm font-semibold uppercase tracking-wider">Coming Soon</span>
-              </div>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Online Donations Launching Soon
-              </h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                We are currently setting up our donation platform to ensure a secure and seamless giving experience. Online donations will be available shortly.
-              </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
-                In the meantime, if you would like to support Strides Over Sidelines, please reach out to us directly and we will be happy to discuss how you can contribute.
-              </p>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild size="lg">
-                  <a href="mailto:Stridesoversidelines@gmail.com?subject=[SOS] Donation Inquiry">
-                    <Mail className="mr-2 h-4 w-4" />
-                    Contact Us to Donate
-                  </a>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">Get in Touch</Link>
-                </Button>
-              </div>
+            <div className="mx-auto max-w-lg">
+              <DonationForm />
             </div>
           </div>
         </section>
@@ -132,7 +110,7 @@ export default function DonatePage() {
                 Thank You
               </h2>
               <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed">
-                Thank you for your interest in investing in young people and expanding access to opportunity. We look forward to opening donations soon.
+                Thank you for your interest in investing in young people and expanding access to opportunity. Every contribution makes a difference.
               </p>
             </div>
           </div>
