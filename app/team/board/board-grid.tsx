@@ -13,6 +13,34 @@ import {
 
 const boardMembers = [
   {
+    id: 4,
+    name: "Jordan Gamarra",
+    role: "",
+    bio: `Jordan Gamarra is the founder of Strides Over Sidelines (SOS) and a member of the SOS Board of Directors, bringing a lifelong commitment to youth athletics, mentorship, and community impact in the Washington, DC metro area.
+
+A former collegiate soccer player with experience at both American University and William & Mary, Jordan also spent time playing professionally before transitioning into leadership and community impact work. His background as an athlete shapes SOS's core philosophy: sport should develop the whole person, not just the player.
+
+Jordan holds a Master of Science in Finance and brings a systems-driven, sustainable approach to nonprofit leadership. As a board member, he is dedicated to advancing programs that integrate technical training with mentorship, leadership development, and mental performance skills that translate beyond the field, with a long-term vision of changing how sports are used as a vehicle for personal and social growth.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "Sports taught me that consistency matters more than talent. Showing up, doing the work, and staying disciplined through setbacks is what creates real growth. Wins come and go, but the habits, resilience, and accountability you build last far beyond the field.",
+    image: "/images/team/jordan-gamarra.jpg",
+    imagePosition: "",
+  },
+  {
+    id: 5,
+    name: "Asia Horne",
+    role: "",
+    bio: `Asia Horne is the co-founder of Strides Over Sidelines (SOS) and a member of the SOS Board of Directors, bringing a deep commitment to youth development, sports psychology, and community empowerment in the Washington, DC metro area.
+
+Raised in The Bronx, Asia saw firsthand how community, support, and guidance can transform potential into confidence. That understanding followed her to Washington, DC, where she played Division I soccer at American University while earning degrees in Psychology and International Studies, followed by a master's in Psychology. Her experience as a collegiate athlete shaped her belief that the lessons learned on the field — leadership, teamwork, and resilience — are the same ones that prepare young people for success beyond it.
+
+As a board member, Asia is passionate about turning the principles of sport into tools for growth in school, athletics, and life, ensuring that young athletes who might otherwise lack access to high-quality training and mentorship can build confidence, discipline, and life skills.`,
+    question: "Biggest lesson that sports has taught you?",
+    answer: "The biggest lesson sports taught me is gratitude. It taught me to appreciate the small improvements just as much as the big victories. When I learned to value the daily growth, not just the outcome, it helped me stay motivated, grounded, and excited to keep learning.",
+    image: "/images/team/asia-horne.jpg",
+    imagePosition: "",
+  },
+  {
     id: 1,
     name: "Aayush Raman",
     role: "",

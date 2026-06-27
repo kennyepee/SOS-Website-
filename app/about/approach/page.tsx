@@ -100,8 +100,8 @@ export default function ApproachPage() {
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                  <Link href="/summer-cohort">
-                    2026 Summer Cohort
+                  <Link href="/2026-703-warriors">
+                    2026 703 Warriors
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

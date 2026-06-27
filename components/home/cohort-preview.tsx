@@ -12,15 +12,15 @@ export function CohortPreview() {
               Now Accepting Applications
             </span>
             <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              2026 Summer Cohort
+              2026 703 Warriors
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Our first full summer cohort will launch in 2026 for players U10–U14, bringing together youth, mentors, and coaches for an immersive program focused on growth, leadership, and long-term development, alongside college and professional training sessions designed to expose participants to higher-level pathways and standards.
+              The 2026 703 Warriors program will launch in 2026 for players U10–U15, bringing together youth, mentors, and coaches for an immersive program focused on growth, leadership, and long-term development, alongside college and professional training sessions designed to expose participants to higher-level pathways and standards.
             </p>
             <div className="mt-8">
               <Button asChild size="lg">
-                <Link href="/summer-cohort">
-                  Learn About the 2026 Cohort
+                <Link href="/2026-703-warriors">
+                  Learn About the 2026 703 Warriors
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>

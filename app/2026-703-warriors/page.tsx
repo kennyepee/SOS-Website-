@@ -1,12 +1,11 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Calendar, Users, Trophy, Brain, GraduationCap, MapPin, Clock, CheckCircle, Heart, Mail, UserRound } from "lucide-react"
+import { Calendar, Users, MapPin, Clock, CheckCircle, Heart, Mail, UserRound } from "lucide-react"
 
 export const metadata = {
-  title: "2026 Summer Cohort | Strides Over Sidelines",
-  description: "Apply for the Strides Over Sidelines 2026 Summer Cohort (U10–U14) — an eight-week, mentorship-driven program designed to support youth development.",
+  title: "2026 703 Warriors | Strides Over Sidelines",
+  description: "Apply for the Strides Over Sidelines 2026 703 Warriors program (U10–U15) — an eight-week, mentorship-driven program designed to support youth development.",
 }
 
 const programFocus = [
@@ -27,13 +26,13 @@ const whoShouldApply = [
 
 const programDetails = [
   { icon: Calendar, label: "Program Length", value: "8 weeks (Summer 2026)" },
-  { icon: UserRound, label: "Age Range", value: "U10–U14 (accepting applications)" },
+  { icon: UserRound, label: "Age Range", value: "U10–U15 (accepting applications)" },
   { icon: Clock, label: "Guaranteed Sessions", value: "One session per week" },
   { icon: MapPin, label: "Location", value: "DC metro area (Arlington & DC)" },
-  { icon: Users, label: "Cohort Size", value: "Limited to maintain quality" },
+  { icon: Users, label: "Program Size", value: "Limited to maintain quality" },
 ]
 
-export default function SummerCohortPage() {
+export default function Warriors703Page() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -46,10 +45,10 @@ export default function SummerCohortPage() {
                 Now Accepting Applications
               </span>
               <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                2026 Summer Cohort
+                2026 703 Warriors
               </h1>
               <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                An eight-week, mentorship-driven program designed to support youth development through soccer, leadership, and mental performance. We are accepting applications for the U10–U14 age range.
+                An eight-week, mentorship-driven program designed to support youth development through soccer, leadership, and mental performance. We are accepting applications for the U10–U15 age range.
               </p>
               <div className="mt-10">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
@@ -70,7 +69,7 @@ export default function SummerCohortPage() {
                 Overview
               </h2>
               <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-                The Strides Over Sidelines 2026 Summer Cohort is an eight-week, mentorship-driven program designed to support youth development through soccer, leadership, and mental performance.
+                The Strides Over Sidelines 2026 703 Warriors program is an eight-week, mentorship-driven program designed to support youth development through soccer, leadership, and mental performance.
               </p>
               <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
                 Each participant is guaranteed one structured session per week for eight weeks. Additional training, mentorship, and workshop sessions may be offered on an as-available basis. The program emphasizes consistency, accountability, and long-term growth on and off the field.
@@ -87,7 +86,7 @@ export default function SummerCohortPage() {
                 Program Focus
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                The 2026 Summer Cohort prioritizes personal development through intentional sport-based programming. Participants will engage in:
+                The 2026 703 Warriors program prioritizes personal development through intentional sport-based programming. Participants will engage in:
               </p>
               <div className="mt-8 space-y-4">
                 {programFocus.map((item, index) => (
@@ -109,7 +108,7 @@ export default function SummerCohortPage() {
                 Who Should Apply
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                This program is designed for youth in the U10–U14 age range who:
+                This program is designed for youth in the U10–U15 age range who:
               </p>
               <div className="mt-8 space-y-4">
                 {whoShouldApply.map((item, index) => (
@@ -166,7 +165,7 @@ export default function SummerCohortPage() {
               
               <h3 className="text-xl font-semibold text-foreground mt-8">Our Commitment to Access</h3>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                Strides Over Sidelines is committed to making our programs accessible to all participants, regardless of financial background. The 2026 Summer Cohort uses a tiered participation model to ensure youth are never excluded due to cost.
+                Strides Over Sidelines is committed to making our programs accessible to all participants, regardless of financial background. The 2026 703 Warriors program uses a tiered participation model to ensure youth are never excluded due to cost.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mt-8">How the Tiered Model Works</h3>
@@ -203,7 +202,7 @@ export default function SummerCohortPage() {
                 Application Process
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Applications for the 2026 Summer Cohort are reviewed on a rolling basis. The application includes:
+                Applications for the 2026 703 Warriors program are reviewed on a rolling basis. The application includes:
               </p>
               <ul className="mt-6 space-y-3">
                 <li className="flex items-start gap-3">
@@ -230,7 +229,7 @@ export default function SummerCohortPage() {
                 Apply Now
               </h2>
               <p className="mt-6 text-lg text-primary-foreground/80">
-                Applications for the 2026 Summer Cohort are now open.
+                Applications for the 2026 703 Warriors program are now open.
               </p>
               <div className="mt-10">
                 <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">

@@ -238,7 +238,7 @@ export default function ImpactPage() {
               </p>
               <div className="mt-10">
                 <Button asChild className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                  <Link href="/summer-cohort">Join the 2026 Cohort</Link>
+                  <Link href="/2026-703-warriors">Join the 2026 703 Warriors</Link>
                 </Button>
               </div>
             </div>

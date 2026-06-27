@@ -11,7 +11,6 @@ export const metadata = {
 
 const trainingTypes = [
   "Youth development training",
-  "College and pro-level sessions",
   "Position-specific or skills-focused training",
 ]
 
@@ -78,10 +77,7 @@ export default function TrainingPage() {
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button asChild>
-                  <Link href="/summer-cohort">2026 Summer Cohort</Link>
-                </Button>
-                <Button asChild variant="outline">
-                  <Link href="/college-pro-sessions">College/Pro Sessions</Link>
+                  <Link href="/2026-703-warriors">2026 703 Warriors</Link>
                 </Button>
               </div>
             </div>

@@ -54,7 +54,7 @@ export default function CalendarPage() {
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button asChild>
-                    <Link href="/summer-cohort">2026 Summer Cohort</Link>
+                    <Link href="/2026-703-warriors">2026 703 Warriors</Link>
                   </Button>
                   <Button asChild variant="outline">
                     <Link href="/contact">Contact Us</Link>

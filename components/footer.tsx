@@ -11,8 +11,7 @@ const navigation = {
     { name: "Impact", href: "/impact" },
   ],
   programs: [
-    { name: "2026 Summer Cohort", href: "/summer-cohort" },
-    { name: "College/Pro Sessions", href: "/college-pro-sessions" },
+    { name: "2026 703 Warriors", href: "/2026-703-warriors" },
     { name: "Events", href: "/events" },
   ],
   getInvolved: [
