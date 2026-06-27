@@ -154,7 +154,7 @@ export function DonationForm() {
             <CheckCircle className="h-8 w-8 text-green-600" />
           </div>
         </div>
-        <h3 className="font-serif text-2xl font-bold text-foreground">
+        <h3 className="text-2xl font-semibold text-foreground">
           Thank You for Your Donation!
         </h3>
         <p className="mt-4 text-muted-foreground max-w-md mx-auto">

@@ -8,8 +8,11 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { PageHero } from "@/components/layout/page-hero"
+import { PageSection } from "@/components/layout/page-section"
+import { SectionTitle } from "@/components/layout/section-title"
 import Link from "next/link"
-import { Mail, MapPin, Instagram, Linkedin, Youtube, Headphones, Send } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 import { useState } from "react"
 
 const inquiryTypes = [
@@ -33,12 +36,12 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     const subject = encodeURIComponent(`[SOS Contact] ${formData.inquiryType || 'General Inquiry'}`)
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`
     )
-    
+
     window.location.href = `mailto:Stridesoversidelines@gmail.com?subject=${subject}&body=${body}`
     setSubmitted(true)
   }
@@ -47,210 +50,171 @@ export default function ContactPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-foreground text-background py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                Contact Us
-              </h1>
-              <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                We would like to hear from you. For general questions, partnerships, volunteering, sponsorships, or media requests, please use the form below or reach out directly.
+        <PageHero
+          title="Contact Us."
+          subtitle="We would like to hear from you. For general questions, partnerships, volunteering, sponsorships, or media requests, please use the form below or reach out directly."
+        />
+
+        <PageSection>
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+            <div>
+              <SectionTitle as="h3">Send Us a Message</SectionTitle>
+              <p className="mt-2 apple-body">
+                Fill out the form below and we will get back to you as soon as possible.
               </p>
-            </div>
-          </div>
-        </section>
 
-        {/* Contact Content */}
-        <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-              {/* Contact Form */}
-              <div>
-                <h2 className="font-serif text-2xl font-bold text-foreground">
-                  Send Us a Message
-                </h2>
-                <p className="mt-2 text-muted-foreground">
-                  Fill out the form below and we will get back to you as soon as possible.
-                </p>
-
-                {submitted ? (
-                  <div className="mt-8 p-8 rounded-xl bg-primary/10 text-center">
-                    <div className="mx-auto h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center mb-4">
-                      <Send className="h-8 w-8 text-primary" />
-                    </div>
-                    <h3 className="font-semibold text-lg text-foreground">Almost There!</h3>
-                    <p className="mt-2 text-muted-foreground">
-                      Your email app should have opened with your message pre-filled. Please confirm and hit send in your email app to complete your message. We will be in touch soon.
-                    </p>
-                    <Button
-                      onClick={() => {
-                        setSubmitted(false)
-                        setFormData({ name: "", email: "", inquiryType: "", message: "" })
-                      }}
-                      variant="outline"
-                      className="mt-4"
-                    >
-                      Send Another Message
-                    </Button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-                    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Name</Label>
-                        <Input
-                          id="name"
-                          placeholder="Your name"
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="your@email.com"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          required
-                        />
-                      </div>
-                    </div>
-
+              {submitted ? (
+                <div className="apple-highlight mt-8">
+                  <h3 className="font-semibold text-lg text-foreground">Almost There!</h3>
+                  <p className="mt-2 apple-body">
+                    Your email app should have opened with your message pre-filled. Please confirm and hit send in your email app to complete your message. We will be in touch soon.
+                  </p>
+                  <Button
+                    onClick={() => {
+                      setSubmitted(false)
+                      setFormData({ name: "", email: "", inquiryType: "", message: "" })
+                    }}
+                    variant="outline"
+                    className="mt-4"
+                  >
+                    Send Another Message
+                  </Button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div className="space-y-2">
-                      <Label htmlFor="inquiry-type">Inquiry Type</Label>
-                      <Select
-                        value={formData.inquiryType}
-                        onValueChange={(value) => setFormData({ ...formData, inquiryType: value })}
-                      >
-                        <SelectTrigger id="inquiry-type">
-                          <SelectValue placeholder="Select inquiry type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {inquiryTypes.map((type) => (
-                            <SelectItem key={type} value={type}>
-                              {type}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        placeholder="How can we help?"
-                        rows={5}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      <Label htmlFor="name">Name</Label>
+                      <Input
+                        id="name"
+                        placeholder="Your name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
                       />
                     </div>
-
-                    <Button type="submit" size="lg" className="w-full sm:w-auto">
-                      Send Message
-                    </Button>
-                  </form>
-                )}
-              </div>
-
-              {/* Contact Info */}
-              <div>
-                <h2 className="font-serif text-2xl font-bold text-foreground">
-                  Get in Touch
-                </h2>
-                <p className="mt-2 text-muted-foreground">
-                  Reach out to us directly through email or follow us on social media.
-                </p>
-
-                <div className="mt-8 space-y-6">
-                  {/* Email */}
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <Mail className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Email</h3>
-                      <p className="mt-1 text-muted-foreground">Stridesoversidelines@gmail.com</p>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="your@email.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        required
+                      />
                     </div>
                   </div>
 
-                  {/* Location */}
-                  <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <MapPin className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Location</h3>
-                      <p className="mt-1 text-muted-foreground">Washington, D.C. Metro Area</p>
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="inquiry-type">Inquiry Type</Label>
+                    <Select
+                      value={formData.inquiryType}
+                      onValueChange={(value) => setFormData({ ...formData, inquiryType: value })}
+                    >
+                      <SelectTrigger id="inquiry-type">
+                        <SelectValue placeholder="Select inquiry type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {inquiryTypes.map((type) => (
+                          <SelectItem key={type} value={type}>
+                            {type}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
 
-                  {/* Social Links */}
-                  <div className="pt-6 border-t border-border">
-                    <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
-                    <div className="flex gap-4">
-                      <a
-                        href="https://www.instagram.com/stridesoversidelines"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        <Instagram className="h-5 w-5" />
-                        <span className="sr-only">Instagram</span>
-                      </a>
-                      <a
-                        href="https://www.linkedin.com/company/strides-over-sidelines"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                        <span className="sr-only">LinkedIn</span>
-                      </a>
-                      <a
-                        href="https://www.youtube.com/@StridesOverSidelines"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        <Youtube className="h-5 w-5" />
-                        <span className="sr-only">YouTube</span>
-                      </a>
-                      <Link
-                        href="/media/podcast"
-                        className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                      >
-                        <Headphones className="h-5 w-5" />
-                        <span className="sr-only">Podcast</span>
-                      </Link>
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="How can we help?"
+                      rows={5}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      required
+                    />
                   </div>
+
+                  <Button type="submit" size="lg" className="w-full sm:w-auto">
+                    Send Message
+                  </Button>
+                </form>
+              )}
+            </div>
+
+            <div>
+              <SectionTitle as="h3">Get in Touch</SectionTitle>
+              <p className="mt-2 apple-body">
+                Reach out to us directly through email or follow us on social media.
+              </p>
+
+              <div className="mt-8 space-y-6">
+                <div>
+                  <h3 className="font-semibold text-foreground">Email</h3>
+                  <p className="mt-1 apple-body">Stridesoversidelines@gmail.com</p>
                 </div>
 
-                {/* Quick Links */}
-                <div className="mt-12 p-6 rounded-xl bg-muted">
-                  <h3 className="font-semibold text-foreground">Quick Links</h3>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <Button asChild variant="outline" size="sm">
-                      <Link href="/about">About SOS</Link>
-                    </Button>
-                    <Button asChild variant="outline" size="sm">
-                      <Link href="/donate">Donate</Link>
-                    </Button>
-                    <Button asChild variant="outline" size="sm">
-                      <Link href="/media/podcast">Podcast</Link>
-                    </Button>
+                <div>
+                  <h3 className="font-semibold text-foreground">Location</h3>
+                  <p className="mt-1 apple-body">Washington, D.C. Metro Area</p>
+                </div>
+
+                <div className="pt-6 border-t border-border">
+                  <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="https://www.instagram.com/stridesoversidelines"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="apple-link"
+                    >
+                      Instagram
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/strides-over-sidelines"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="apple-link"
+                    >
+                      LinkedIn
+                    </a>
+                    <a
+                      href="https://www.youtube.com/@StridesOverSidelines"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="apple-link"
+                    >
+                      YouTube
+                    </a>
+                    <Link href="/media/podcast" className="apple-link">
+                      Podcast
+                    </Link>
                   </div>
+                </div>
+              </div>
+
+              <div className="mt-12 apple-nav-card">
+                <h3 className="font-semibold text-foreground">Quick Links</h3>
+                <div className="mt-4 flex flex-wrap gap-4">
+                  <Link href="/about" className="apple-link inline-flex items-center gap-1">
+                    About SOS
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                  <Link href="/donate" className="apple-link inline-flex items-center gap-1">
+                    Donate
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                  <Link href="/media/podcast" className="apple-link inline-flex items-center gap-1">
+                    Podcast
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </PageSection>
       </main>
       <Footer />
     </div>

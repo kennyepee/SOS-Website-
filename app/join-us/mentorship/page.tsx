@@ -2,27 +2,25 @@ import React from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Users, ArrowLeft, Heart, Clock, BookOpen, Shield, CheckCircle } from "lucide-react"
+import { PageHero } from "@/components/layout/page-hero"
+import { PageSection } from "@/components/layout/page-section"
+import { SectionTitle } from "@/components/layout/section-title"
+import { BackLink } from "@/components/layout/back-link"
 
 const mentorBenefits = [
   {
-    icon: Heart,
     title: "Make a Lasting Impact",
     description: "Build a meaningful relationship with a young athlete and help shape their future.",
   },
   {
-    icon: Clock,
     title: "Flexible Commitment",
     description: "We work with your schedule to find a mentoring arrangement that fits your life.",
   },
   {
-    icon: BookOpen,
     title: "Training & Support",
     description: "Receive comprehensive training and ongoing support from our team.",
   },
   {
-    icon: Shield,
     title: "Safe Environment",
     description: "All mentors are background checked and participate in structured programming.",
   },
@@ -37,158 +35,95 @@ const expectations = [
   "Participate in at least one SOS event per quarter with your mentee",
 ]
 
+const mentorJourney = [
+  { step: "1", title: "Apply", description: "Submit your application and share why you want to mentor." },
+  { step: "2", title: "Interview & Screening", description: "Meet with our team and complete background checks." },
+  { step: "3", title: "Training", description: "Participate in mentor training to prepare for your role." },
+  { step: "4", title: "Match & Begin", description: "Get matched with a mentee and start your journey together." },
+]
+
 export default function MentorshipPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-foreground text-background py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <Link
-                href="/join-us"
-                className="inline-flex items-center gap-2 text-sm text-background/60 hover:text-background mb-6 transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to Join Us
-              </Link>
-              <div className="flex justify-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
+        <PageSection containerClassName="max-w-4xl">
+          <BackLink href="/join-us" label="Back to Join Us" />
+        </PageSection>
+
+        <PageHero
+          title="Mentorship Program."
+          subtitle="Become a mentor and make a transformative impact on a young athlete's life through consistent guidance, support, and encouragement."
+        />
+
+        <PageSection>
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <SectionTitle centered>Why Become a Mentor?</SectionTitle>
+            <p className="mt-4 apple-body">
+              Mentoring is one of the most impactful ways you can contribute to youth development.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {mentorBenefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <h3 className="font-semibold text-foreground">{benefit.title}</h3>
+                <p className="mt-2 text-sm apple-body">{benefit.description}</p>
               </div>
-              <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                Mentorship Program
-              </h1>
-              <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                Become a mentor and make a transformative impact on a young athlete's life through consistent guidance, support, and encouragement.
+            ))}
+          </div>
+        </PageSection>
+
+        <PageSection alt>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <SectionTitle>What We Expect from Mentors</SectionTitle>
+              <p className="mt-4 apple-body">
+                We're looking for dedicated individuals who can commit to building a meaningful relationship with a young athlete.
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits */}
-        <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center mb-16">
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Why Become a Mentor?
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Mentoring is one of the most impactful ways you can contribute to youth development.
-              </p>
+              <ul className="mt-8 space-y-4">
+                {expectations.map((expectation, index) => (
+                  <li key={index} className="apple-list-item">
+                    <span className="apple-body">{expectation}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-              {mentorBenefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="text-center p-6 rounded-xl bg-card border border-border"
-                >
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <benefit.icon className="h-7 w-7" />
-                  </div>
-                  <h3 className="mt-4 font-semibold text-foreground">
-                    {benefit.title}
-                  </h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* What to Expect */}
-        <section className="py-20 lg:py-28 bg-muted">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              <div>
-                <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                  What We Expect from Mentors
-                </h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  We're looking for dedicated individuals who can commit to building a meaningful relationship with a young athlete.
-                </p>
-                <ul className="mt-8 space-y-4">
-                  {expectations.map((expectation, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                      <span className="text-muted-foreground">{expectation}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="p-8 rounded-2xl bg-card border border-border">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-6">
-                  The Mentor Journey
-                </h3>
-                <div className="space-y-6">
-                  <div className="flex gap-4">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                      1
+            <div className="apple-nav-card">
+              <SectionTitle as="h3" className="mb-6">The Mentor Journey</SectionTitle>
+              <div className="space-y-6">
+                {mentorJourney.map((item) => (
+                  <div key={item.step} className="flex gap-4">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-semibold">
+                      {item.step}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">Apply</h4>
-                      <p className="text-sm text-muted-foreground">Submit your application and share why you want to mentor.</p>
+                      <h4 className="font-semibold text-foreground">{item.title}</h4>
+                      <p className="text-sm apple-body">{item.description}</p>
                     </div>
                   </div>
-                  <div className="flex gap-4">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">Interview & Screening</h4>
-                      <p className="text-sm text-muted-foreground">Meet with our team and complete background checks.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">Training</h4>
-                      <p className="text-sm text-muted-foreground">Participate in mentor training to prepare for your role.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                      4
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">Match & Begin</h4>
-                      <p className="text-sm text-muted-foreground">Get matched with a mentee and start your journey together.</p>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
-        </section>
+        </PageSection>
 
-        {/* Application CTA */}
-        <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Apply to Be a Mentor
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Ready to make an impact? Fill out our mentor application to get started.
-              </p>
-              <div className="mt-10">
-                <Button asChild size="lg">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHmQ6kNG1GvzwAyykcVedTDwmkoXVugvY4Vn4x3WhH-I4eVA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                    Apply Now
-                  </a>
-                </Button>
-              </div>
+        <PageSection>
+          <div className="mx-auto max-w-2xl text-center">
+            <SectionTitle centered>Apply to Be a Mentor.</SectionTitle>
+            <p className="mt-4 apple-body">
+              Ready to make an impact? Fill out our mentor application to get started.
+            </p>
+            <div className="mt-10">
+              <Button asChild size="lg">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHmQ6kNG1GvzwAyykcVedTDwmkoXVugvY4Vn4x3WhH-I4eVA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                  Apply Now
+                </a>
+              </Button>
             </div>
           </div>
-        </section>
+        </PageSection>
       </main>
       <Footer />
     </div>

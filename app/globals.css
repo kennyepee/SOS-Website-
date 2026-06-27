@@ -4,24 +4,24 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.985 0.002 90);
-  --foreground: oklch(0.2 0.02 250);
+  --background: oklch(0.995 0 0);
+  --foreground: oklch(0.21 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.02 250);
+  --card-foreground: oklch(0.21 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.02 250);
+  --popover-foreground: oklch(0.21 0 0);
   --primary: oklch(0.45 0.12 165);
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.96 0.01 90);
-  --secondary-foreground: oklch(0.2 0.02 250);
-  --muted: oklch(0.94 0.01 90);
-  --muted-foreground: oklch(0.45 0.02 250);
-  --accent: oklch(0.65 0.15 45);
-  --accent-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.21 0 0);
+  --muted: oklch(0.965 0.002 264);
+  --muted-foreground: oklch(0.52 0.01 264);
+  --accent: oklch(0.965 0.002 264);
+  --accent-foreground: oklch(0.21 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.90 0.01 90);
-  --input: oklch(0.90 0.01 90);
+  --border: oklch(0.90 0.005 264);
+  --input: oklch(0.90 0.005 264);
   --ring: oklch(0.45 0.12 165);
   --chart-1: oklch(0.45 0.12 165);
   --chart-2: oklch(0.65 0.15 45);
@@ -75,8 +75,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
-  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, 'Times New Roman', serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -120,7 +120,49 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .apple-section {
+    @apply py-16 md:py-24;
+  }
+  .apple-section-alt {
+    @apply bg-muted;
+  }
+  .apple-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest text-primary;
+  }
+  .apple-headline {
+    @apply text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl text-balance;
+  }
+  .apple-subhead {
+    @apply text-lg font-normal text-muted-foreground sm:text-xl md:text-2xl leading-relaxed;
+  }
+  .apple-link {
+    @apply text-primary text-base font-normal transition-colors hover:underline;
+  }
+  .apple-body {
+    @apply text-base text-muted-foreground leading-relaxed md:text-lg;
+  }
+  .apple-highlight {
+    @apply my-12 rounded-2xl md:rounded-3xl bg-muted p-8 md:p-10 text-center;
+  }
+  .apple-nav-card {
+    @apply block rounded-2xl md:rounded-3xl bg-muted p-8 md:p-10 transition-colors hover:bg-muted/70;
+  }
+  .apple-list-item {
+    @apply flex items-start gap-3 rounded-xl bg-muted/60 p-4 md:p-5;
+  }
+  .glass-nav {
+    @apply bg-background/72 backdrop-blur-xl backdrop-saturate-150 border-b border-border/60;
   }
 }

@@ -2,8 +2,10 @@ import React from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Users, ArrowLeft, CheckCircle } from "lucide-react"
+import { PageHero } from "@/components/layout/page-hero"
+import { PageSection } from "@/components/layout/page-section"
+import { SectionTitle } from "@/components/layout/section-title"
+import { BackLink } from "@/components/layout/back-link"
 
 const mentorResponsibilities = [
   "Building consistent, positive relationships",
@@ -17,75 +19,51 @@ export default function MentorshipPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-foreground text-background py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <Link
-                href="/get-involved"
-                className="inline-flex items-center gap-2 text-sm text-background/60 hover:text-background mb-6 transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to Get Involved
-              </Link>
-              <div className="flex justify-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-              <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                Be a Mentor
-              </h1>
-              <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                Mentors are central to the SOS model. Make a lasting impact on young athletes through consistent guidance and support.
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageSection containerClassName="max-w-4xl">
+          <BackLink href="/get-involved" label="Back to Get Involved" />
+        </PageSection>
 
-        {/* About Mentorship */}
-        <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                At SOS, mentors are current or former high-level soccer players who understand the demands, discipline, and lessons that come with competitive sport.
-              </p>
-              <h3 className="mt-8 text-xl font-semibold text-foreground">Mentors support participants by:</h3>
-              <div className="mt-6 space-y-4">
-                {mentorResponsibilities.map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-muted-foreground">
-                Mentors may include current or former collegiate, semi-professional, or professional players. Time commitment varies and is designed to be remote and flexible.
-              </p>
-            </div>
-          </div>
-        </section>
+        <PageHero
+          title="Be a Mentor."
+          subtitle="Mentors are central to the SOS model. Make a lasting impact on young athletes through consistent guidance and support."
+        />
 
-        {/* Application CTA */}
-        <section className="py-20 lg:py-28 bg-muted">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                Become a Mentor
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Ready to make an impact? Fill out our mentor application to get started.
-              </p>
-              <div className="mt-10">
-                <Button asChild size="lg">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHmQ6kNG1GvzwAyykcVedTDwmkoXVugvY4Vn4x3WhH-I4eVA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
-                    Apply Now
-                  </a>
-                </Button>
-              </div>
+        <PageSection>
+          <div className="mx-auto max-w-3xl">
+            <p className="apple-body">
+              At SOS, mentors are current or former high-level soccer players who understand the demands, discipline, and lessons that come with competitive sport.
+            </p>
+            <SectionTitle as="h3" className="mt-8">
+              Mentors support participants by:
+            </SectionTitle>
+            <ul className="mt-6 space-y-4">
+              {mentorResponsibilities.map((item, index) => (
+                <li key={index} className="apple-list-item">
+                  <span className="apple-body">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="apple-body mt-8">
+              Mentors may include current or former collegiate, semi-professional, or professional players. Time commitment varies and is designed to be remote and flexible.
+            </p>
+          </div>
+        </PageSection>
+
+        <PageSection alt>
+          <div className="mx-auto max-w-2xl text-center">
+            <SectionTitle centered>Become a Mentor.</SectionTitle>
+            <p className="mt-4 apple-body">
+              Ready to make an impact? Fill out our mentor application to get started.
+            </p>
+            <div className="mt-10">
+              <Button asChild size="lg">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHmQ6kNG1GvzwAyykcVedTDwmkoXVugvY4Vn4x3WhH-I4eVA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                  Apply Now
+                </a>
+              </Button>
             </div>
           </div>
-        </section>
+        </PageSection>
       </main>
       <Footer />
     </div>

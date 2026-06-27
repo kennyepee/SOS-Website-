@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Youtube, Linkedin, Mail, MapPin } from "lucide-react"
+import { Instagram, Youtube, Linkedin } from "lucide-react"
 
 const navigation = {
   about: [
@@ -11,7 +11,7 @@ const navigation = {
     { name: "Impact", href: "/impact" },
   ],
   programs: [
-    { name: "2026 703 Warriors", href: "/2026-703-warriors" },
+    { name: "703 Warriors 2026", href: "/2026-703-warriors" },
     { name: "Events", href: "/events" },
   ],
   getInvolved: [
@@ -35,43 +35,28 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-2">
+    <footer className="border-t border-border bg-muted">
+      <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
+          <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <Image
               src="/images/sos-logo.png"
               alt="Strides Over Sidelines"
-              width={160}
-              height={70}
-              className="h-14 w-auto mb-4 brightness-0 invert"
+              width={140}
+              height={60}
+              className="h-10 w-auto"
             />
-            <p className="text-background/80 text-sm leading-relaxed">
-              Delivering soccer training, mentorship, and mental performance tools to underserved youth across the Washington, DC metro area.
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
+              Soccer training, mentorship, and mental performance tools for underserved youth in the DC metro area.
             </p>
-            <div className="mt-6 space-y-2">
-              <div className="flex items-center gap-2 text-sm text-background/80">
-                <MapPin className="h-4 w-4 shrink-0" />
-                <span>Washington, DC Metro Area</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-background/80">
-                <Mail className="h-4 w-4 shrink-0" />
-                <span>Stridesoversidelines@gmail.com</span>
-              </div>
-            </div>
           </div>
 
-          {/* About Links */}
           <div>
-            <h4 className="font-semibold mb-4">About</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">About</h4>
             <ul className="space-y-2">
               {navigation.about.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-background/80 hover:text-background text-sm transition-colors"
-                  >
+                  <Link href={item.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     {item.name}
                   </Link>
                 </li>
@@ -79,16 +64,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Programs Links */}
           <div>
-            <h4 className="font-semibold mb-4">Programs</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">Programs</h4>
             <ul className="space-y-2">
               {navigation.programs.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-background/80 hover:text-background text-sm transition-colors"
-                  >
+                  <Link href={item.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     {item.name}
                   </Link>
                 </li>
@@ -96,33 +77,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Get Involved Links */}
           <div>
-            <h4 className="font-semibold mb-4">Get Involved</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground mb-4">Get Involved</h4>
             <ul className="space-y-2">
               {navigation.getInvolved.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-background/80 hover:text-background text-sm transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Media Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Media</h4>
-            <ul className="space-y-2">
-              {navigation.media.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-background/80 hover:text-background text-sm transition-colors"
-                  >
+                  <Link href={item.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     {item.name}
                   </Link>
                 </li>
@@ -131,25 +91,24 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Social & Copyright */}
-        <div className="mt-12 pt-8 border-t border-background/20">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex gap-4">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-background/60 hover:text-background transition-colors"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-            <p className="text-sm text-background/60">
-              © 2025 Strides Over Sidelines. All rights reserved.
-            </p>
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 md:flex-row">
+          <div className="flex gap-4">
+            {navigation.social.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground transition-colors hover:text-primary"
+              >
+                <span className="sr-only">{item.name}</span>
+                <item.icon className="h-5 w-5" />
+              </a>
+            ))}
           </div>
+          <p className="text-xs text-muted-foreground">
+            © {new Date().getFullYear()} Strides Over Sidelines. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

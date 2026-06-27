@@ -29,7 +29,7 @@ export function ZelleDonationCard() {
             className="h-9 w-9"
           />
         </div>
-        <h3 className="font-serif text-xl font-semibold text-foreground leading-tight">
+        <h3 className="text-xl font-semibold text-foreground leading-tight">
           Donate with Zelle
         </h3>
       </div>

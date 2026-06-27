@@ -62,7 +62,7 @@ export function AdvisorsGrid() {
           <div
             key={member.id}
             onClick={() => setSelectedMember(member)}
-            className="group p-6 rounded-2xl bg-card border border-border hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer"
+            className="group cursor-pointer rounded-2xl bg-muted/60 p-6 transition-colors hover:bg-muted"
           >
             {member.image ? (
               <div className="aspect-square w-32 mx-auto rounded-full overflow-hidden mb-6">
@@ -80,7 +80,7 @@ export function AdvisorsGrid() {
               </div>
             )}
             <div className="text-center">
-              <h3 className="font-serif text-xl font-bold text-foreground">
+              <h3 className="text-lg font-semibold tracking-tight text-foreground">
                 {member.name}
               </h3>
               {member.role && (
@@ -115,7 +115,7 @@ export function AdvisorsGrid() {
                     </div>
                   )}
                   <div className="text-center sm:text-left">
-                    <DialogTitle className="font-serif text-2xl font-bold">
+                    <DialogTitle className="text-2xl font-semibold tracking-tight">
                       {selectedMember.name}
                     </DialogTitle>
                     {selectedMember.role && (

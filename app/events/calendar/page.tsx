@@ -1,8 +1,12 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { PageHero } from "@/components/layout/page-hero"
+import { PageSection } from "@/components/layout/page-section"
+import { SectionTitle } from "@/components/layout/section-title"
+import { BackLink } from "@/components/layout/back-link"
 import Link from "next/link"
-import { Calendar, ArrowLeft } from "lucide-react"
+import { ChevronRight } from "lucide-react"
 
 export const metadata = {
   title: "Events Calendar | Strides Over Sidelines",
@@ -14,56 +18,34 @@ export default function CalendarPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-foreground text-background py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <Link
-                href="/events"
-                className="inline-flex items-center gap-2 text-sm text-background/60 hover:text-background mb-6 transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to Events
-              </Link>
-              <div className="flex justify-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-                  <Calendar className="h-8 w-8 text-primary" />
-                </div>
-              </div>
-              <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                Upcoming Events
-              </h1>
-              <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                The SOS Events Calendar lists all upcoming workshops, training sessions, and fundraising events.
+        <PageSection containerClassName="max-w-4xl">
+          <BackLink href="/events" label="Back to Events" />
+        </PageSection>
+
+        <PageHero
+          title="Upcoming Events."
+          subtitle="The SOS Events Calendar lists all upcoming workshops, training sessions, and fundraising events."
+        />
+
+        <PageSection>
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="apple-highlight">
+              <SectionTitle as="h3" centered>Calendar Launching Soon</SectionTitle>
+              <p className="mt-4 apple-body">
+                Event details will include dates, locations, and registration information as they become available.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Calendar Coming Soon */}
-        <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <div className="p-12 rounded-2xl bg-muted border border-border">
-                <Calendar className="h-16 w-16 mx-auto text-muted-foreground/50" />
-                <h2 className="mt-6 font-serif text-2xl font-bold text-foreground">
-                  Calendar Launching Soon
-                </h2>
-                <p className="mt-4 text-muted-foreground">
-                  Event details will include dates, locations, and registration information as they become available.
-                </p>
-                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button asChild>
-                    <Link href="/2026-703-warriors">2026 703 Warriors</Link>
-                  </Button>
-                  <Button asChild variant="outline">
-                    <Link href="/contact">Contact Us</Link>
-                  </Button>
-                </div>
-              </div>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Button asChild>
+                <Link href="/2026-703-warriors">703 Warriors 2026</Link>
+              </Button>
+              <Link href="/contact" className="apple-link inline-flex items-center gap-1">
+                Contact Us
+                <ChevronRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
-        </section>
+        </PageSection>
       </main>
       <Footer />
     </div>

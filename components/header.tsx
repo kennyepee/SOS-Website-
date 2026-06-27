@@ -18,7 +18,7 @@ const navigation = [
       { name: "Team", href: "/team/staff" },
     ],
   },
-  { name: "2026 703 Warriors", href: "/2026-703-warriors" },
+  { name: "703 Warriors 2026", href: "/2026-703-warriors" },
   { name: "Impact", href: "/impact" },
   {
     name: "Get Involved",
@@ -57,8 +57,8 @@ export function Header() {
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null)
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+    <header className="sticky top-0 z-50 glass-nav">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2 lg:px-8">
         <div className="flex">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
@@ -66,7 +66,7 @@ export function Header() {
               alt="Strides Over Sidelines"
               width={180}
               height={80}
-              className="h-14 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
         </div>
@@ -74,7 +74,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
           >
             <span className="sr-only">Open main menu</span>
             {mobileMenuOpen ? (
@@ -96,19 +96,19 @@ export function Header() {
                 <>
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-md hover:bg-gray-50 transition-colors"
+                    className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                   >
                     {item.name}
                     <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                   </Link>
                   {openDropdown === item.name && (
                     <div className="absolute left-0 top-full pt-1 w-52 z-50">
-                      <div className="rounded-lg bg-white border border-gray-100 shadow-lg">
+                      <div className="rounded-xl bg-background border border-border shadow-lg overflow-hidden">
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                            className="block px-4 py-2.5 text-sm text-foreground/80 hover:bg-muted hover:text-foreground transition-colors"
                           >
                             {child.name}
                           </Link>
@@ -120,14 +120,14 @@ export function Header() {
               ) : (
                 <Link
                   href={item.href}
-                  className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-md hover:bg-gray-50 transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
                   {item.name}
                 </Link>
               )}
             </div>
           ))}
-          <Button asChild className="bg-primary hover:bg-primary/90 text-white ml-3">
+          <Button asChild size="sm" className="ml-3">
             <Link href="/donate">Donate</Link>
           </Button>
         </div>
@@ -135,13 +135,13 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-100">
+        <div className="lg:hidden border-t border-border">
           <div className="space-y-1 px-4 pb-4 pt-2 max-h-[80vh] overflow-y-auto">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.children ? (
                   <div>
-                    <div className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+                    <div className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-base font-medium text-foreground">
                       <Link
                         href={item.href}
                         className="flex-1"
@@ -162,7 +162,7 @@ export function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block rounded-lg px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-700"
+                            className="block rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {child.name}
@@ -174,7 +174,7 @@ export function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
+                    className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-muted"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -183,7 +183,7 @@ export function Header() {
               </div>
             ))}
             <div className="pt-4">
-              <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white">
+              <Button asChild className="w-full">
                 <Link href="/donate">Donate</Link>
               </Button>
             </div>

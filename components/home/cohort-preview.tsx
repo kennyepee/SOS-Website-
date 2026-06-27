@@ -1,54 +1,57 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Calendar, Users, GraduationCap } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+
+const highlights = [
+  { label: "Partner", detail: "703 Warriors" },
+  { label: "Location", detail: "Arlington, VA" },
+  { label: "Dates", detail: "August–September 2026" },
+  { label: "Focus", detail: "Mental performance & mental health" },
+]
 
 export function CohortPreview() {
   return (
-    <section className="py-20 lg:py-28 bg-muted">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-full bg-primary/10 text-primary mb-4">
-              Now Accepting Applications
-            </span>
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              2026 703 Warriors
-            </h2>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              The 2026 703 Warriors program will launch in 2026 for players U10–U15, bringing together youth, mentors, and coaches for an immersive program focused on growth, leadership, and long-term development, alongside college and professional training sessions designed to expose participants to higher-level pathways and standards.
-            </p>
-            <div className="mt-8">
-              <Button asChild size="lg">
-                <Link href="/2026-703-warriors">
-                  Learn About the 2026 703 Warriors
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
+    <section className="apple-section">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="text-center">
+          <p className="apple-eyebrow">SOS × 703 Warriors</p>
+          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl text-balance">
+            Mental Performance Program.
+          </h2>
+          <p className="apple-subhead mx-auto mt-4 max-w-2xl text-base sm:text-lg md:text-xl">
+            On-field soccer training and in-person mentorship — giving young players the tools to succeed in the sport and in life.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <Calendar className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 font-semibold text-foreground">8 Weeks</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Structured summer program with guaranteed weekly sessions</p>
+        <div className="relative mx-auto mt-12 aspect-[16/10] max-w-4xl overflow-hidden rounded-2xl md:rounded-3xl bg-muted shadow-xl shadow-foreground/5">
+          <Image
+            src="/images/gallery/gallery-18.png"
+            alt="703 Warriors player during SOS practice"
+            fill
+            className="object-cover"
+            sizes="(max-width: 896px) 100vw, 896px"
+          />
+        </div>
+
+        <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-8 md:grid-cols-4 md:gap-6">
+          {highlights.map((item) => (
+            <div key={item.label} className="text-center">
+              <p className="text-lg font-semibold tracking-tight text-foreground md:text-xl">
+                {item.label}
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground md:text-base">{item.detail}</p>
             </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <Users className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 font-semibold text-foreground">Mentorship-Driven</h3>
-              <p className="mt-2 text-sm text-muted-foreground">1:1 mentorship from former collegiate and pro athletes</p>
-            </div>
-            <div className="p-6 rounded-xl bg-card border border-border">
-              <GraduationCap className="h-8 w-8 text-primary" />
-              <h3 className="mt-4 font-semibold text-foreground">College Exposure</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Training sessions with collegiate and professional players</p>
-            </div>
-            <div className="p-6 rounded-xl bg-card border border-border bg-primary/5">
-              <div className="text-2xl font-bold text-primary">DC Metro</div>
-              <h3 className="mt-2 font-semibold text-foreground">Arlington & DC Area</h3>
-              <p className="mt-2 text-sm text-muted-foreground">In-person sessions throughout the region</p>
-            </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Button asChild size="lg">
+            <Link href="/2026-703-warriors">
+              Learn more
+              <ChevronRight className="h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

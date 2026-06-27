@@ -1,80 +1,68 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Heart, Headphones, Instagram, Linkedin, Youtube } from "lucide-react"
+import { ChevronRight, Headphones, Instagram, Linkedin, Youtube } from "lucide-react"
 
 export function CtaSection() {
   return (
-    <section className="py-20 lg:py-28 bg-muted">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Stay Connected */}
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Stay Connected
+    <section className="apple-section">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            Stay connected.
           </h2>
-          <p className="mt-4 text-muted-foreground">
+          <p className="apple-subhead mx-auto mt-4 max-w-xl text-base sm:text-lg">
             Follow our work and hear stories from our community.
           </p>
-          <div className="mt-6 flex items-center justify-center gap-4">
-            <a href="https://www.instagram.com/stridesoversidelines" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-              <Instagram className="h-5 w-5" />
+          <div className="mt-6 flex items-center justify-center gap-5">
+            <a href="https://www.instagram.com/stridesoversidelines" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary">
+              <Instagram className="h-6 w-6" />
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="https://www.linkedin.com/company/strides-over-sidelines" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-              <Linkedin className="h-5 w-5" />
+            <a href="https://www.linkedin.com/company/strides-over-sidelines" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary">
+              <Linkedin className="h-6 w-6" />
               <span className="sr-only">LinkedIn</span>
             </a>
-            <a href="https://www.youtube.com/@StridesOverSidelines" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-              <Youtube className="h-5 w-5" />
+            <a href="https://www.youtube.com/@StridesOverSidelines" target="_blank" rel="noopener noreferrer" className="text-muted-foreground transition-colors hover:text-primary">
+              <Youtube className="h-6 w-6" />
               <span className="sr-only">YouTube</span>
             </a>
-            <Link href="/media/podcast" className="flex h-10 w-10 items-center justify-center rounded-full bg-card border border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-              <Headphones className="h-5 w-5" />
+            <Link href="/media/podcast" className="text-muted-foreground transition-colors hover:text-primary">
+              <Headphones className="h-6 w-6" />
               <span className="sr-only">Podcast</span>
             </Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {/* Donate CTA */}
-          <div className="relative overflow-hidden rounded-2xl bg-primary p-8 lg:p-12">
-            <div className="relative z-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-foreground/20">
-                <Heart className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <h3 className="mt-6 font-serif text-2xl font-bold text-primary-foreground lg:text-3xl">
-                Help Build Opportunity That Lasts
-              </h3>
-              <p className="mt-4 text-primary-foreground/80 leading-relaxed">
-                Your support helps SOS deliver high-quality soccer training, mentorship, and mental performance tools to underserved youth.
-              </p>
-              <Button asChild className="mt-6 bg-primary-foreground text-primary hover:bg-primary-foreground/90">
-                <Link href="/donate">Donate Now</Link>
+        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="rounded-2xl md:rounded-3xl bg-muted p-10 md:p-12 text-center">
+            <h3 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+              Help build opportunity that lasts.
+            </h3>
+            <p className="mt-4 text-base text-muted-foreground leading-relaxed md:text-lg">
+              Your support helps SOS deliver training, mentorship, and mental performance tools to underserved youth.
+            </p>
+            <div className="mt-8">
+              <Button asChild size="lg">
+                <Link href="/donate">Donate now</Link>
               </Button>
             </div>
-            {/* Decorative element */}
-            <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-primary-foreground/10" />
-            <div className="absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-primary-foreground/5" />
           </div>
 
-          {/* Podcast CTA */}
-          <div className="relative overflow-hidden rounded-2xl bg-foreground p-8 lg:p-12">
-            <div className="relative z-10">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-background/20">
-                <Headphones className="h-6 w-6 text-background" />
-              </div>
-              <h3 className="mt-6 font-serif text-2xl font-bold text-background lg:text-3xl">
-                Listen to The SOS Podcast
-              </h3>
-              <p className="mt-4 text-background/80 leading-relaxed">
-                Conversations with athletes, coaches, mentors, and leaders who believe in sport as a platform for growth and opportunity.
-              </p>
-              <Button asChild variant="outline" className="mt-6 border-background/30 text-background hover:bg-background/10 bg-transparent">
-                <Link href="/media/podcast">Explore Episodes</Link>
+          <div className="rounded-2xl md:rounded-3xl bg-foreground p-10 md:p-12 text-center">
+            <h3 className="text-2xl font-semibold tracking-tight text-background md:text-3xl">
+              The SOS Podcast.
+            </h3>
+            <p className="mt-4 text-base text-background/70 leading-relaxed md:text-lg">
+              Conversations with athletes, coaches, and leaders who believe in sport as a platform for growth.
+            </p>
+            <div className="mt-8">
+              <Button asChild size="lg" variant="outline" className="border-background/20 bg-transparent text-background hover:bg-background/10">
+                <Link href="/media/podcast">
+                  Explore episodes
+                  <ChevronRight className="h-4 w-4" />
+                </Link>
               </Button>
             </div>
-            {/* Decorative element */}
-            <div className="absolute -right-8 -top-8 h-40 w-40 rounded-full bg-background/10" />
-            <div className="absolute -bottom-12 -left-12 h-48 w-48 rounded-full bg-background/5" />
           </div>
         </div>
       </div>

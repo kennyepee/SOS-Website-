@@ -1,8 +1,11 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
+import { PageHero } from "@/components/layout/page-hero"
+import { PageSection } from "@/components/layout/page-section"
+import { SectionTitle } from "@/components/layout/section-title"
+import { BackLink } from "@/components/layout/back-link"
 import Link from "next/link"
-import { Trophy, ArrowLeft, CheckCircle } from "lucide-react"
 
 export const metadata = {
   title: "Training Sessions | Strides Over Sidelines",
@@ -19,70 +22,44 @@ export default function TrainingPage() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="bg-foreground text-background py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <Link
-                href="/events"
-                className="inline-flex items-center gap-2 text-sm text-background/60 hover:text-background mb-6 transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to Events
-              </Link>
-              <div className="flex justify-center mb-6">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/20">
-                  <Trophy className="h-8 w-8 text-primary" />
+        <PageSection containerClassName="max-w-4xl">
+          <BackLink href="/events" label="Back to Events" />
+        </PageSection>
+
+        <PageHero
+          title="Training Sessions."
+          subtitle="SOS training sessions focus on structured, development-first soccer environments."
+        />
+
+        <PageSection>
+          <div className="mx-auto max-w-3xl">
+            <SectionTitle as="h3">Sessions may include:</SectionTitle>
+            <div className="mt-6 space-y-4">
+              {trainingTypes.map((item, index) => (
+                <div key={index} className="apple-list-item">
+                  <span className="text-foreground">{item}</span>
                 </div>
-              </div>
-              <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">
-                Training Sessions
-              </h1>
-              <p className="mt-6 text-lg text-background/80 leading-relaxed">
-                SOS training sessions focus on structured, development-first soccer environments.
-              </p>
+              ))}
             </div>
+            <p className="apple-body mt-8">
+              Training sessions are designed to maintain high standards while prioritizing growth and learning.
+            </p>
           </div>
-        </section>
+        </PageSection>
 
-        {/* Training Types */}
-        <section className="py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl">
-              <h2 className="font-serif text-2xl font-bold text-foreground">Sessions may include:</h2>
-              <div className="mt-6 space-y-4">
-                {trainingTypes.map((item, index) => (
-                  <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-card border border-border">
-                    <CheckCircle className="h-5 w-5 shrink-0 text-primary mt-0.5" />
-                    <span className="text-foreground">{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-muted-foreground">
-                Training sessions are designed to maintain high standards while prioritizing growth and learning.
-              </p>
+        <PageSection alt>
+          <div className="mx-auto max-w-3xl text-center">
+            <SectionTitle centered>Our Programs.</SectionTitle>
+            <p className="mt-4 apple-body">
+              Learn more about our structured training programs.
+            </p>
+            <div className="mt-10">
+              <Button asChild>
+                <Link href="/2026-703-warriors">703 Warriors 2026</Link>
+              </Button>
             </div>
           </div>
-        </section>
-
-        {/* Program Links */}
-        <section className="py-20 lg:py-28 bg-muted">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
-                Our Programs
-              </h2>
-              <p className="mt-4 text-muted-foreground">
-                Learn more about our structured training programs.
-              </p>
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild>
-                  <Link href="/2026-703-warriors">2026 703 Warriors</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        </PageSection>
       </main>
       <Footer />
     </div>
