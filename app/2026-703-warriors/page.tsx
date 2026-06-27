@@ -6,7 +6,7 @@ import { PageSection } from "@/components/layout/page-section"
 import { SectionTitle } from "@/components/layout/section-title"
 
 export const metadata = {
-  title: "703 Warriors 2026 | Strides Over Sidelines",
+  title: "SOS × 703 Warriors | Strides Over Sidelines",
   description:
     "SOS partners with 703 Warriors to bring mental performance and mental health programming to youth athletes in Arlington, VA. August–September 2026.",
 }

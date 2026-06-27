@@ -18,7 +18,7 @@ const navigation = [
       { name: "Team", href: "/team/staff" },
     ],
   },
-  { name: "703 Warriors 2026", href: "/2026-703-warriors" },
+  { name: "SOS × 703 Warriors", href: "/2026-703-warriors" },
   { name: "Impact", href: "/impact" },
   {
     name: "Get Involved",
